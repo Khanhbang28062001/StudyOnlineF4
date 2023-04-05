@@ -1,0 +1,286 @@
+<head>
+    <meta charset="utf-8">
+    <title>Lộ trình học</title>
+    <link href="study-route.component.css" rel="stylesheet">
+</head>
+
+<body style="overflow-y: overlay; overflow-x: unset;">
+    <div id="root">
+      <div class="NavBar_wrapper__4m3K5" id="header">
+        <div class="NavBar_logo__Rgo-5">
+            <a href="/home-page-st">
+                <img src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                    alt="F8">
+            </a>
+            <a href="/home-page-st" class="NavBar_backHome__U1RTm">
+                <h4 class="NavBar_logoHeading__bs7MP">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                        class="svg-inline--fa fa-chevron-left " role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z">
+                        </path>
+                    </svg>
+                    <span>Quay lại</span>
+                </h4>
+            </a>
+        </div>
+        <div class="NavBar_body__4Yhth d-flex-center">
+            <div>
+                <div class="Search_wrapper__Bwvae d-flex-center" aria-expanded="false">
+                    <div class="Search_searchIcon__-23JY"></div>
+                    <input class="Search_input__GnMba" spellcheck="false" placeholder="Tìm kiếm khóa học, bài viết, video, ..." value="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="NavBar_actions__nSNzo">
+            <div id="navbar-actions-portal"></div>
+            <div><button class="NavBar_myLearn__vCvEB" aria-expanded="false">Khóa học của tôi</button></div>
+            <div>
+                <div class="NavBar_actionBtn__tzSZd" id="notification-button" aria-expanded="false">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell NavBar_action-icon__l9MxX" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="NavBar_avatar-wrapper__j7jMj" aria-expanded="false">
+                    <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:3.2px;">
+                        <img class="NavBar_avatar__OG7ib" src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/fallback-avatar.155cdb2376c5d99ea151.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDwaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAOV4dx67OJ8WzQgNglX5wHwYU%2FThVzgoXGTX3NyilvqLAiBRiVsIagR2YgtzKbvwna4TdY2psPGRGIA0HB7x4HEnqyrtAgj1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYxNTMxNTc1MTc3MSIMWS%2BDQbMWb9sbwjanKsECEbbL8IYxw5n3w9xX78lzBkmBZ4Rv%2Fw05McZbgSvpHQmyx5agWm2vNA3sEuDIAK2XzXV%2FalBhcltwjJjEOkCajlC2FqMB8urol9QziAhicwdL0uRoOa3lag08obxs3JP6nh5%2Fv%2FRB%2FVH7Ft8itH5LAqw7Th2eZNgFM8qnbuWpY0GQTzIvb4PWw8ifHInPkCfix14BgHrEa8rf%2BqxYRokY8C5q5eJzqSmxFaUgG54s3ID374pLjXDM2ugsc%2B5OQ2rp0VN7OwiCdcFrl9oTIsNU2ztNPixGFVP%2FKau8RYYD8ivDwyIgKavutsVockVvQvNM10k2s9Kq0rouWcj%2BAxaiInOL19nL%2FcX0mt%2FD5EUHkFNydvYvXucRUUO4WP2Nfl3UaJyE0VE1aqNnvfiXWFqu%2FouGgbsC6Qc8rRXhWtmJYabyMPWtx6AGOrMCLvRFSkBhp7I1%2BeA4QLn1hW3G%2FHJZKJtasqRbcRLjRCcfEmhBP4nelY1sAJ3IRlzKxzFCWJG7G%2B8MCatpQqDYyTYqFUdVIz1UWCifEld0%2FHRKOtfFm7Z7%2FvAqnLcBJK5FXuHprsDbSKkeFy2dbb7%2BemivetbynI9oZX63bd69GBfr9V4KZKm6mFEqUBKcBdC%2BolsCZIEO8LKzr7IKZE0zNWKsuw9UzoZ%2FqAAScSY78be%2BNbv0ShASkw34%2FYUM3FDPoTsX6CatOzf2iiCM7XC0OBHUr90uQ5CqW76jlc8sb1NzE1kikgWnMk3lxvmNA%2BzXu6oF4vt%2FLE547wHMOVLev926RTkm4Hj9k5Y2wGVsmUPhss9XX45ZBGq1S2rfU8bG9a5NtnSNWaprlobfu0GW%2FXY3Ow%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230315T203510Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14400&X-Amz-Credential=ASIAY6Q5NINNXK4XTKOW%2F20230315%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=b498115c5ae7780fe1b68853ca0c76794791e8dfa345f5561920346406d4d931" alt="I hate you So much">
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="App_withSidebar__8lwIi">
+        <div class="App_sidebarWrap__3LwsB">
+            <div class="Sidebar_wrapper__kUJFm" id="sidebar">
+              <div>
+                <div class="CreateButton_wrapper__Bb6o6" aria-expanded="false">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus"
+                    class="svg-inline--fa fa-plus CreateButton_icon__ipBrz" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                      d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <ul class="Sidebar_list__HnCzM">
+                <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 Sidebar_active__uvck8" routerLink="/home-page-st" routerLinkActive="active"><i
+                      class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet></li>
+                <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/study-route" routerLinkActive="active"><i
+                      class="fa-solid fa-road"></i><span>Lộ trình</span></a><router-outlet></router-outlet>
+                    </li>
+                <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/home-page-st" routerLinkActive="active"><i
+                     class="fa-solid fa-lightbulb"></i><span>Học</span></a><router-outlet></router-outlet>
+                </li>
+                <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/blog" routerLinkActive="active"><i
+                      class="fa-solid fa-book"></i><span>Blog</span></a><router-outlet></router-outlet></li>
+              </ul>
+            </div>
+          </div>
+        <div class="App_withSidebarContent__o4VlQ">
+          <section class="index-module_grid__1q71E index-module_fullWidth__3X-6x" style="max-width: 1920px;">
+            <div class="DefaultLayout_container__NgAo7">
+              <div class="DefaultLayout_container-top__l5XfT">
+                <h1 class="DefaultLayout_heading__AvBHu">Lộ trình học</h1>
+                <div class="MarkdownParser_wrapper__JYN63 DefaultLayout_desc__rr0iE">
+                  <p>Để bắt đầu một cách thuận lợi, bạn nên tập trung vào một lộ trình học. Ví dụ: Để đi làm với vị trí "Lập trình viên Front-end" bạn nên tập trung vào lộ trình "Front-end".</p>
+                </div>
+              </div>
+              <div class="container-body">
+                <div class="LearningPathsList_content__+7GMN">
+                  <div class="LearningPathItem_wrapper__H9uQB">
+                    <div class="LearningPathItem_body__usZtM">
+                      <div class="LearningPathItem_info__gjteP">
+                        <h2 class="LearningPathItem_title__z0X7F"><a routerLink="/study-route-fe" routerLinkActive="avtive">Lộ trình học Front-end</a><router-outlet></router-outlet></h2>
+                        <p class="LearningPathItem_desc__EoPKD">Lập trình viên Front-end là người xây dựng ra giao diện websites. Trong phần này F4 sẽ chia sẻ cho bạn lộ trình để trở thành lập trình viên Front-end nhé.</p>
+                      </div>
+                      <div class="LearningPathItem_thumb-wrap__BUF9R">
+                        <a class="LearningPathItem_thumb-round__Lvoe8"
+                        href="/learning-paths/front-end-development">
+                            <img class="LearningPathItem_thumb__sFsG3"
+                            src="https://files.fullstack.edu.vn/f8-prod/learning-paths/2/63b4642136f3e.png" 
+                            alt="Lộ trình học Front-end">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="LearningPathItem_cta__2-Sdl">
+                        <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                            <div class="CircularProgressBar_pie__pROMB"><div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/courses/lessons-for-newbie" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/7/6200b81f52d83.png" alt="Kiến Thức Nhập Môn IT">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/landing/htmlcss" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/15/62385d6c63dfa.png" alt="HTML CSS Pro">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:14; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/learning/responsive-web-design" style="--progress:grayscale(86%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/3/6200afe1240bb.png" alt="Responsive Với Grid System">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:17; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/learning/javascript-co-ban" style="--progress:grayscale(83%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/1/6200ad9d8a2d8.png" alt="Lập Trình JavaScript Cơ Bản">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/courses/javascript-nang-cao" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/12/6200af2620118.png" alt="Lập Trình JavaScript Nâng Cao"></a>
+                            </div>
+                        </div>
+                        <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                            <div class="CircularProgressBar_pie__pROMB">
+                                <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                            </div>
+                            <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                            <div class="CircularProgressBar_body__BYOBo">
+                                <a class="CourseStep_wrapper__fcAQO" href="/courses/windows-terminal-wsl" style="--progress:grayscale(100%);">
+                                    <img src="https://files.fullstack.edu.vn/f8-prod/courses/14/624faac2ee23d.png" alt="Làm việc với Terminal &amp; Ubuntu"></a>
+                                </div>
+                            </div>
+                            <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                                <div class="CircularProgressBar_pie__pROMB">
+                                    <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                                </div>
+                                <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                                <div class="CircularProgressBar_body__BYOBo">
+                                    <a class="CourseStep_wrapper__fcAQO" href="/learning/reactjs" style="--progress:grayscale(100%);">
+                                        <img src="https://files.fullstack.edu.vn/f8-prod/courses/13/6200af9262b30.png" alt="Xây Dựng Website với ReactJS">
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    <div>
+                        <a class="Button_btn__RW1e2 Button_primary__86yfm LearningPathItem_view-detail__8myxm" routerLink="/study-route-fe" routerLinkActive="active" >Xem chi tiết</a><router-outlet></router-outlet>
+                    </div>
+                  </div>
+                  <div class="LearningPathItem_wrapper__H9uQB">
+                    <div class="LearningPathItem_body__usZtM">
+                        <div class="LearningPathItem_info__gjteP">
+                            <h2 class="LearningPathItem_title__z0X7F">
+                                <a routerLink="/study-route-be" routerLinkActive="active">Lộ trình học Back-end</a><router-outlet></router-outlet>
+                            </h2>
+                            <p class="LearningPathItem_desc__EoPKD">Trái với Front-end thì lập trình viên Back-end là người làm việc với dữ liệu, công việc thường nặng tính logic hơn. Chúng ta sẽ cùng tìm hiểu thêm về lộ trình học Back-end nhé.</p>
+                        </div>
+                        <div class="LearningPathItem_thumb-wrap__BUF9R">
+                            <a class="LearningPathItem_thumb-round__Lvoe8" href="/learning-paths/back-end-development">
+                                <img class="LearningPathItem_thumb__sFsG3" src="https://files.fullstack.edu.vn/f8-prod/learning-paths/3/63b4641535b16.png" alt="Lộ trình học Back-end">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="LearningPathItem_cta__2-Sdl">
+                        <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;"><div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/courses/lessons-for-newbie" style="--progress:grayscale(100%);"><img src="https://files.fullstack.edu.vn/f8-prod/courses/7/6200b81f52d83.png" alt="Kiến Thức Nhập Môn IT"></a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:17; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/learning/javascript-co-ban" style="--progress:grayscale(83%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/1/6200ad9d8a2d8.png" alt="Lập Trình JavaScript Cơ Bản">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/courses/javascript-nang-cao" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/12/6200af2620118.png" alt="Lập Trình JavaScript Nâng Cao">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/courses/windows-terminal-wsl" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/14/624faac2ee23d.png" alt="Làm việc với Terminal &amp; Ubuntu">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/learning/nodejs" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/6/6200afb926038.png" alt="Node &amp; ExpressJS">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="CircularProgressBar_pie-wrapper__ga0xC progress-45 style-2 CourseStep_progress__i9Yn1" style="--size:40px; --progress:0; --bar-width:2px; --shadow-bg-hover-color:#d4d4d4;">
+                        <div class="CircularProgressBar_pie__pROMB">
+                            <div class="CircularProgressBar_left-side__Q9ngf CircularProgressBar_half-circle__07yig"></div>
+                        </div>
+                        <div class="CircularProgressBar_shadow__N5Vl-"></div>
+                        <div class="CircularProgressBar_body__BYOBo">
+                            <a class="CourseStep_wrapper__fcAQO" href="/landing/htmlcss" style="--progress:grayscale(100%);">
+                                <img src="https://files.fullstack.edu.vn/f8-prod/courses/15/62385d6c63dfa.png" alt="HTML CSS Pro">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div><a class="Button_btn__RW1e2 Button_primary__86yfm LearningPathItem_view-detail__8myxm" routerLink="/study-route-be" routerLinkActive="active">Xem chi tiết</a><router-outlet></router-outlet></div>
+                </div>
+                </div>
+                <div class="SuggestionBox_wrapper__1wl-2">
+                    <div class="SuggestionBox_info__etqmd">
+                        <h2>Tham gia cộng đồng học viên F4 trên Facebook</h2>
+                        <p>Hàng nghìn người khác đang học lộ trình giống như bạn. Hãy tham gia hỏi đáp, chia sẻ và hỗ trợ nhau trong quá trình học nhé.</p>
+                        <a class="SuggestionBox_cta__f4eTC" target="_blank" href="https://www.facebook.com/groups/f8official" rel="noopener">Tham gia nhóm</a>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="Toastify"></div>
+    </div>
+  </body>
+

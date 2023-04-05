@@ -1,0 +1,466 @@
+<head>
+    <meta charset="utf-8">
+    <link href="study-route-fe.component.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="NavBar_wrapper__4m3K5" id="header">
+            <div class="NavBar_logo__Rgo-5">
+                <a href="/home-page-st">
+                    <img src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                        alt="F8">
+                </a>
+                <a href="/home-page-st" class="NavBar_backHome__U1RTm">
+                    <h4 class="NavBar_logoHeading__bs7MP">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                            class="svg-inline--fa fa-chevron-left " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path fill="currentColor"
+                                d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z">
+                            </path>
+                        </svg>
+                        <span>Quay lại</span>
+                    </h4>
+                </a>
+            </div>
+            <div class="NavBar_body__4Yhth d-flex-center">
+                <div>
+                    <div class="Search_wrapper__Bwvae d-flex-center" aria-expanded="false">
+                        <div class="Search_searchIcon__-23JY"></div>
+                        <input class="Search_input__GnMba" spellcheck="false"
+                            placeholder="Tìm kiếm khóa học, bài viết, video, ..." value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="NavBar_actions__nSNzo">
+                <div id="navbar-actions-portal"></div>
+                <div><button class="NavBar_myLearn__vCvEB" aria-expanded="false">Khóa học của tôi</button></div>
+                <div>
+                    <div class="NavBar_actionBtn__tzSZd" id="notification-button" aria-expanded="false">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
+                            class="svg-inline--fa fa-bell NavBar_action-icon__l9MxX" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="NavBar_avatar-wrapper__j7jMj" aria-expanded="false">
+                    <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:3.2px;">
+                        <img class="NavBar_avatar__OG7ib"
+                            src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/fallback-avatar.155cdb2376c5d99ea151.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDwaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAOV4dx67OJ8WzQgNglX5wHwYU%2FThVzgoXGTX3NyilvqLAiBRiVsIagR2YgtzKbvwna4TdY2psPGRGIA0HB7x4HEnqyrtAgj1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYxNTMxNTc1MTc3MSIMWS%2BDQbMWb9sbwjanKsECEbbL8IYxw5n3w9xX78lzBkmBZ4Rv%2Fw05McZbgSvpHQmyx5agWm2vNA3sEuDIAK2XzXV%2FalBhcltwjJjEOkCajlC2FqMB8urol9QziAhicwdL0uRoOa3lag08obxs3JP6nh5%2Fv%2FRB%2FVH7Ft8itH5LAqw7Th2eZNgFM8qnbuWpY0GQTzIvb4PWw8ifHInPkCfix14BgHrEa8rf%2BqxYRokY8C5q5eJzqSmxFaUgG54s3ID374pLjXDM2ugsc%2B5OQ2rp0VN7OwiCdcFrl9oTIsNU2ztNPixGFVP%2FKau8RYYD8ivDwyIgKavutsVockVvQvNM10k2s9Kq0rouWcj%2BAxaiInOL19nL%2FcX0mt%2FD5EUHkFNydvYvXucRUUO4WP2Nfl3UaJyE0VE1aqNnvfiXWFqu%2FouGgbsC6Qc8rRXhWtmJYabyMPWtx6AGOrMCLvRFSkBhp7I1%2BeA4QLn1hW3G%2FHJZKJtasqRbcRLjRCcfEmhBP4nelY1sAJ3IRlzKxzFCWJG7G%2B8MCatpQqDYyTYqFUdVIz1UWCifEld0%2FHRKOtfFm7Z7%2FvAqnLcBJK5FXuHprsDbSKkeFy2dbb7%2BemivetbynI9oZX63bd69GBfr9V4KZKm6mFEqUBKcBdC%2BolsCZIEO8LKzr7IKZE0zNWKsuw9UzoZ%2FqAAScSY78be%2BNbv0ShASkw34%2FYUM3FDPoTsX6CatOzf2iiCM7XC0OBHUr90uQ5CqW76jlc8sb1NzE1kikgWnMk3lxvmNA%2BzXu6oF4vt%2FLE547wHMOVLev926RTkm4Hj9k5Y2wGVsmUPhss9XX45ZBGq1S2rfU8bG9a5NtnSNWaprlobfu0GW%2FXY3Ow%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230315T203510Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14400&X-Amz-Credential=ASIAY6Q5NINNXK4XTKOW%2F20230315%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=b498115c5ae7780fe1b68853ca0c76794791e8dfa345f5561920346406d4d931"
+                            alt="I hate you So much">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="App_withSidebar__8lwIi">
+            <div class="App_sidebarWrap__3LwsB">
+                <div class="Sidebar_wrapper__kUJFm" id="sidebar">
+                  <div>
+                    <div class="CreateButton_wrapper__Bb6o6" aria-expanded="false">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus"
+                        class="svg-inline--fa fa-plus CreateButton_icon__ipBrz" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                          d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="Sidebar_list__HnCzM">
+                    <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 Sidebar_active__uvck8" routerLink="/home-page-st" routerLinkActive="active"><i
+                          class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet></li>
+                    <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/study-route" routerLinkActive="active"><i
+                          class="fa-solid fa-road"></i><span>Lộ trình</span></a><router-outlet></router-outlet>
+                        </li>
+                    <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/home-page-st" routerLinkActive="active"><i
+                         class="fa-solid fa-lightbulb"></i><span>Học</span></a><router-outlet></router-outlet>
+                    </li>
+                    <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/blog" routerLinkActive="active"><i
+                          class="fa-solid fa-book"></i><span>Blog</span></a><router-outlet></router-outlet></li>
+                  </ul>
+                </div>
+              </div>
+            <div class="App_withSidebarContent__o4VlQ">
+                <section class="index-module_grid__1q71E index-module_fullWidth__3X-6x" style="max-width: 1920px;">
+                    <div class="DefaultLayout_container__NgAo7">
+                        <div class="DefaultLayout_container-top__l5XfT">
+                            <h1 class="DefaultLayout_heading__AvBHu">Lộ trình học Front-end</h1>
+                            <div class="MarkdownParser_wrapper__JYN63 DefaultLayout_desc__rr0iE"
+                                style="--font-size:1.5rem; --line-height:1.6;">
+                                <p>Hầu hết các websites hoặc ứng dụng di động đều có 2 phần là Front-end và Back-end.
+                                    Front-end là phần giao diện người dùng nhìn thấy và có thể tương tác, đó chính là
+                                    các ứng dụng mobile hay những website bạn đã từng sử dụng. Vì vậy, nhiệm vụ của lập
+                                    trình viên Front-end là xây dựng các giao diện đẹp, dễ sử dụng và tối ưu trải nghiệm
+                                    người dùng.</p>
+                                <p>Tại Việt Nam, <strong><a href="/external-url?continue=https%3A%2F%2Fbit.ly%2F3p40c2D"
+                                            target="_blank" rel="noreferrer">lương trung bình</a></strong> cho lập trình
+                                    viên front-end vào khoảng <strong>16.000.000đ</strong> / tháng.</p>
+                                <p>Dưới đây là các khóa học F4 đã tạo ra dành cho bất cứ ai theo đuổi sự nghiệp trở
+                                    thành một lập trình viên Front-end.</p>
+                                <blockquote>
+                                    <p>Các khóa học có thể chưa đầy đủ, F4 vẫn đang nỗ lực hoàn thiện trong thời gian
+                                        sớm nhất.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="container-body">
+                            <section class="index-module_row__-AHgh">
+                                <section
+                                    class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-8__yebHm">
+                                    <div class="LearningPathGroup_wrapper__PqkfS">
+                                        <h2 class="LearningPathGroup_title__9Sige">1. Tìm hiểu về ngành IT</h2>
+                                        <p class="LearningPathGroup_desc__SnXOr">Để theo ngành IT - Phần mềm cần rèn
+                                            luyện những kỹ năng nào? Bạn đã có sẵn tố chất phù hợp với ngành chưa? Cùng
+                                            thăm quan các công ty IT và tìm hiểu về văn hóa, tác phong làm việc của
+                                            ngành này nhé các bạn.</p>
+                                        <div class="body">
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/courses/lessons-for-newbie"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/7.png"
+                                                                    alt="Kiến Thức Nhập Môn IT"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/courses/lessons-for-newbie">Kiến Thức Nhập
+                                                                    Môn IT<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Để có cái nhìn tổng quan
+                                                                về ngành IT - Lập trình web các bạn nên xem các videos
+                                                                tại khóa này trước nhé.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/course" routerLinkActive="active">Xem khóa học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LearningPathGroup_wrapper__PqkfS">
+                                        <h2 class="LearningPathGroup_title__9Sige">2. HTML và CSS</h2>
+                                        <p class="LearningPathGroup_desc__SnXOr">Để học web Front-end chúng ta luôn bắt
+                                            đầu với ngôn ngữ HTML và CSS, đây là 2 ngôn ngữ có mặt trong mọi website
+                                            trên internet. Trong khóa học này F4 sẽ chia sẻ từ những kiến thức cơ bản
+                                            nhất. Sau khóa học này bạn sẽ tự làm được 2 giao diện websites là The Band
+                                            và Shopee.</p>
+                                        <div class="body">
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/landing/htmlcss"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png"
+                                                                    alt="HTML CSS Pro">
+                                                                <div class="CourseItem_pro-icon__QF+WM"><img
+                                                                        src="/static/media/crown_icon.3e4800f7485935ab6ea312a7080a85fe.svg"
+                                                                        alt=""></div>
+                                                            </a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/landing/htmlcss">HTML CSS Pro</a></h2>
+                                                            <div class="CourseItem_price__04Rfh"><span
+                                                                    class="CourseItem_old-price__wcjOt">2.499.000đ</span><span
+                                                                    class="CourseItem_main-price__+vEej">1.299.000đ</span>
+                                                            </div>
+                                                            <p class="CourseItem_desc__uqUwX">Từ cơ bản tới chuyên sâu,
+                                                                thực hành 8 dự án, hàng trăm bài tập, trang hỏi đáp
+                                                                riêng, cấp chứng chỉ sau khóa học và mua một lần học mãi
+                                                                mãi.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/course" routerLinkActive="active">Xem khóa học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                    <div class="related-course-items">
+                                                        <h3 class="CourseItem_related-course-title__jmPfc">Khóa học liên
+                                                            quan</h3>
+                                                        <div class="CourseItem_related-courses__lXBnT">
+                                                            <div class="wrapper">
+                                                                <div class="RelatedCourses_inner__HqcPw"><a
+                                                                        href="/learning/html-css">
+                                                                        <div class="RelatedCourses_thumb__s7L7M"><img
+                                                                                class="RelatedCourses_thumb-img__kze2+"
+                                                                                src="https://files.fullstack.edu.vn/f8-prod/courses/2.png"
+                                                                                alt="HTML CSS từ Zero đến Hero"></div>
+                                                                    </a>
+                                                                    <div class="RelatedCourses_info__RsrCP">
+                                                                        <h2 class="RelatedCourses_title__7-5kS"><a
+                                                                                href="/learning/html-css">HTML CSS từ
+                                                                                Zero đến Hero <span
+                                                                                    class="RelatedCourses_free-title__nxPW4">Miễn
+                                                                                    phí</span></a></h2>
+                                                                        <div class="RelatedCourses_price__ZguAm"></div>
+                                                                        <p class="RelatedCourses_desc__Mwl6N">Trong khóa
+                                                                            này chúng ta sẽ cùng nhau xây dựng giao diện
+                                                                            2 trang web là The Band &amp; Shopee.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/learning/responsive-web-design"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/3.png"
+                                                                    alt="Responsive Với Grid System"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/learning/responsive-web-design">Responsive
+                                                                    Với Grid System<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Trong khóa này chúng ta sẽ
+                                                                học về cách xây dựng giao diện web responsive với Grid
+                                                                System, tương tự Bootstrap 4.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/keep-study" routerLinkActive="active">Tiếp tục học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LearningPathGroup_wrapper__PqkfS">
+                                        <h2 class="LearningPathGroup_title__9Sige">3. JavaScript</h2>
+                                        <p class="LearningPathGroup_desc__SnXOr">Với HTML, CSS bạn mới chỉ xây dựng được
+                                            các websites tĩnh, chỉ bao gồm phần giao diện và gần như chưa có xử lý tương
+                                            tác gì. Để thêm nhiều chức năng phong phú và tăng tính tương tác cho website
+                                            bạn cần học Javascript.</p>
+                                        <div class="body">
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/learning/javascript-co-ban"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/1.png"
+                                                                    alt="Lập Trình JavaScript Cơ Bản"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/learning/javascript-co-ban">Lập Trình
+                                                                    JavaScript Cơ Bản<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Học Javascript cơ bản phù
+                                                                hợp cho người chưa từng học lập trình. Với hơn 100 bài
+                                                                học và có bài tập thực hành sau mỗi bài học.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/keep-study" routerLinkActive="active">Tiếp tục học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/courses/javascript-nang-cao"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/12.png"
+                                                                    alt="Lập Trình JavaScript Nâng Cao"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/courses/javascript-nang-cao">Lập Trình
+                                                                    JavaScript Nâng Cao<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Hiểu sâu hơn về cách
+                                                                Javascript hoạt động, tìm hiểu về IIFE, closure,
+                                                                reference types, this keyword, bind, call, apply,
+                                                                prototype, ...</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/course" routerLinkActive="active">Xem khóa học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LearningPathGroup_wrapper__PqkfS">
+                                        <h2 class="LearningPathGroup_title__9Sige">4. Sử dụng Ubuntu/Linux</h2>
+                                        <p class="LearningPathGroup_desc__SnXOr">Cách làm việc với hệ điều hành
+                                            Ubuntu/Linux qua Windows Terminal &amp; WSL. Khi đi làm, nhiều trường hợp
+                                            bạn cần nắm vững các dòng lệnh cơ bản của Ubuntu/Linux.</p>
+                                        <div class="body">
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/courses/windows-terminal-wsl"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/14/624faac11d109.png"
+                                                                    alt="Làm việc với Terminal &amp; Ubuntu"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/courses/windows-terminal-wsl">Làm việc với
+                                                                    Terminal &amp; Ubuntu<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Sở hữu một Terminal hiện
+                                                                đại, mạnh mẽ trong tùy biến và học cách làm việc với
+                                                                Ubuntu là một bước quan trọng trên con đường trở thành
+                                                                một Web Developer.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/course" routerLinkActive="active">Xem khóa học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LearningPathGroup_wrapper__PqkfS">
+                                        <h2 class="LearningPathGroup_title__9Sige">5. Libraries and Frameworks</h2>
+                                        <p class="LearningPathGroup_desc__SnXOr">Một websites hay ứng dụng hiện đại rất
+                                            phức tạp, chỉ sử dụng HTML, CSS, Javascript theo cách code thuần (tự code từ
+                                            đầu tới cuối) sẽ rất khó khăn. Vì vậy các Libraries, Frameworks ra đời nhằm
+                                            đơn giản hóa, tiết kiệm chi phí và thời gian để hoàn thành một sản phẩm
+                                            website hoặc ứng dụng mobile.</p>
+                                        <div class="body">
+                                            <div>
+                                                <div class="CourseItem_wrapper__kyH00">
+                                                    <div class="CourseItem_inner__YxSfd">
+                                                        <div class="CourseItem_thumb__7g8hs"><a
+                                                                href="/learning/reactjs"><img
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/13/13.png"
+                                                                    alt="Xây Dựng Website với ReactJS"></a></div>
+                                                        <div class="CourseItem_info__kIF53">
+                                                            <h2 class="CourseItem_title__ezJnH"><a
+                                                                    href="/learning/reactjs">Xây Dựng Website với
+                                                                    ReactJS<span
+                                                                        class="CourseItem_free-title__KAqeo">Miễn
+                                                                        phí</span></a></h2>
+                                                            <div class="CourseItem_price__04Rfh"></div>
+                                                            <p class="CourseItem_desc__uqUwX">Khóa học ReactJS từ cơ bản
+                                                                tới nâng cao, kết quả của khóa học này là bạn có thể làm
+                                                                hầu hết các dự án thường gặp với ReactJS. Cuối khóa học
+                                                                này bạn sẽ sở hữu một dự án giống Tiktok.com, bạn có thể
+                                                                tự tin đi xin việc khi nắm chắc các kiến thức được chia
+                                                                sẻ trong khóa học này.</p><a
+                                                                class="Button_btn__RW1e2 Button_primary__86yfm CourseItem_detail-btn__70DYv"
+                                                                routerLink="/keep-study" routerLinkActive="active">Tiếp tục học</a><router-outlet></router-outlet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ProCourses_wrapper__XZFQs">
+                                        <h2 class="ProCourses_pro-courses-list-title__5efX9">Các khóa học Pro tại F4<img
+                                                class="ProCourses_crown-icon__JJhtG"
+                                                src="/static/media/crown_icon.3e4800f7485935ab6ea312a7080a85fe.svg"
+                                                alt=""></h2>
+                                        <p class="ProCourses_pro-courses-list-desc__x2bf5">Các khóa học Pro được thiết
+                                            kế đầy đủ chi tiết, bài bản. Với đa dạng các loại bài học và bài tập thực
+                                            hành đi kèm, code luôn ở trang web. Cuối khóa học sẽ được thực hành từ 8 -
+                                            10 dự án thực chiến với cấp độ từ dễ đến khó.</p>
+                                        <div class="ProCourses_pro-course-items__KqHA7">
+                                            <section class="index-module_row__-AHgh">
+                                                <section
+                                                    class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-4__3tf5p">
+                                                    <div class="ProCourses_inner__e0pPB"><a target=""
+                                                            href="/landing/htmlcss">
+                                                            <div
+                                                                class="ProCourses_thumb__j0PQ6 ProCourses_has-link__12j-u">
+                                                                <img class="ProCourses_thumb-img__GDgWs"
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png"
+                                                                    alt="HTML CSS Pro">
+                                                                <div class="ProCourses_pro-icon__htAog"><img
+                                                                        src="/static/media/crown_icon.3e4800f7485935ab6ea312a7080a85fe.svg"
+                                                                        alt=""></div><button
+                                                                    class="Button_btn__RW1e2 ProCourses_cta-btn__Nnc-N">Xem
+                                                                    khóa học</button>
+                                                            </div>
+                                                        </a>
+                                                        <div class="ProCourses_info__L4akz">
+                                                            <h2 class="ProCourses_title__u5Jwb"><a target=""
+                                                                    href="/landing/htmlcss">HTML CSS Pro </a></h2>
+                                                            <div class="ProCourses_price__txRIo"><span
+                                                                    class="ProCourses_old-price__+w47m">2.499.000đ</span><span
+                                                                    class="ProCourses_main-price__QP0CE">1.299.000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section
+                                                    class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-4__3tf5p">
+                                                    <div class="ProCourses_inner__e0pPB"><span target="">
+                                                            <div class="ProCourses_thumb__j0PQ6"><img
+                                                                    class="ProCourses_thumb-img__GDgWs"
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb607b4b.png"
+                                                                    alt="JavaScript Pro">
+                                                                <div class="ProCourses_pro-icon__htAog"><img
+                                                                        src="/static/media/crown_icon.3e4800f7485935ab6ea312a7080a85fe.svg"
+                                                                        alt=""></div>
+                                                            </div>
+                                                        </span>
+                                                        <div class="ProCourses_info__L4akz">
+                                                            <h2 class="ProCourses_title__u5Jwb"><span
+                                                                    target="">JavaScript Pro </span></h2>
+                                                            <div class="ProCourses_price__txRIo"></div><span
+                                                                class="ProCourses_desc__3H0VF">Dự kiến: 05/2023</span>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section
+                                                    class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-4__3tf5p">
+                                                    <div class="ProCourses_inner__e0pPB"><span target="">
+                                                            <div class="ProCourses_thumb__j0PQ6"><img
+                                                                    class="ProCourses_thumb-img__GDgWs"
+                                                                    src="https://files.fullstack.edu.vn/f8-prod/courses/20/62f13dded314e.png"
+                                                                    alt="ReactJS Pro">
+                                                                <div class="ProCourses_pro-icon__htAog"><img
+                                                                        src="/static/media/crown_icon.3e4800f7485935ab6ea312a7080a85fe.svg"
+                                                                        alt=""></div>
+                                                            </div>
+                                                        </span>
+                                                        <div class="ProCourses_info__L4akz">
+                                                            <h2 class="ProCourses_title__u5Jwb"><span target="">ReactJS
+                                                                    Pro </span></h2>
+                                                            <div class="ProCourses_price__txRIo"></div><span
+                                                                class="ProCourses_desc__3H0VF">Dự kiến: 08/2023</span>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section
+                                    class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-4__3tf5p">
+                                    <div class="Banners_wrapper__8fjJA Banners_sticky__7wV6o"
+                                        style="--sticky:80px; --align:flex-end;">
+                                        <div class="Banners_content__+mAzY"><a class="Banners_banner__z3Id2"
+                                                href="https://fullstack.edu.vn/landing/htmlcss" target="_blank"
+                                                rel="noreferrer"><img
+                                                    src="https://files.fullstack.edu.vn/f8-prod/banners/22/63dc5f7e5562c.png"
+                                                    alt="HTML CSS Pro Banner" title="HTML CSS Pro Banner"></a></div>
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <div class="NewFeed_wrapper__GUAsw"><button class="NewFeed_button__EVRw+"><span
+                            class="NewFeed_icon__SEASG"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                                <path fill="currentColor"
+                                    d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M15,15.6L13,14H4V10H13L15,8.4V15.6M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z">
+                                </path>
+                            </svg></span></button></div>
+            </div>
+        </div>
+
+        <div class="Toastify"></div>
+    </div>
+</body>
