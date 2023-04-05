@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./keep-study.component.css']
 })
 export class KeepStudyComponent {
-
+  public isAddNote :boolean = false;
+  public TimeGhiChu = "TimeGhiChu";
+  constructor(){}
+  addNoteInTime(): void{
+    this.isAddNote = !this.isAddNote;
+  }
 }

@@ -39,8 +39,7 @@
                 <div id="navbar-actions-portal">
                     <div class="NewPost_navbar-actions-portals__hT30R">
                         <div class="NewPost_nav-actions__zzC9x">
-                            <button
-                                class="Button_btn__RW1e2 Button_primary__86yfm Button_disabled__1cmvp NewPost_publish-btn__57tHD">Xuất
+                            <button (click)="submitBlog()"  class="Button_btn__RW1e2 Button_primary__86yfm NewPost_publish-btn__57tHD">Xuất
                                 bản</button>
                         </div>
                     </div>
@@ -196,7 +195,7 @@
                             </div>
                             <div class="editor-container">
                                 <section class="section sec-md visible">
-                                    <textarea name="textarea" placeholder="Nội dung viết ở đây"
+                                    <textarea [(ngModel)]="Name"  placeholder="Nội dung viết ở đây"
                                         class="section-container input MdTextEditor_editor__7rfC-"
                                         wrap="hard"></textarea>
                                 </section>

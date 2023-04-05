@@ -15,15 +15,17 @@
         <div>
             <section class="index-module_grid__1q71E index-module_fullWidth__3X-6x">
                 <div class="Header_wrapper__kLf4u">
-                    <div class="Header_back-btn__itVsY" title="Rời khỏi đây"routerLink="/home-page-st" routerLinkActive="active"><svg aria-hidden="true" focusable="false"
-                            data-prefix="fas" data-icon="chevron-left"
-                            class="svg-inline--fa fa-chevron-left Header_icon__2EjW3" role="img"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <div class="Header_back-btn__itVsY" title="Rời khỏi đây" routerLink="/home-page-st"
+                        routerLinkActive="active"><svg aria-hidden="true" focusable="false" data-prefix="fas"
+                            data-icon="chevron-left" class="svg-inline--fa fa-chevron-left Header_icon__2EjW3"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                             <path fill="currentColor"
                                 d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z">
                             </path>
-                        </svg></div><a class="Header_logo__HzGsJ" routerLink="/home-page-st" routerLinkActive="active" ><router-outlet></router-outlet><img
-                            src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png" alt="F8"></a>
+                        </svg></div><a class="Header_logo__HzGsJ" routerLink="/home-page-st"
+                        routerLinkActive="active"><router-outlet></router-outlet><img
+                            src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                            alt="F8"></a>
                     <div class="Header_course-title__8+56A">Kiến Thức Nhập Môn IT</div>
                     <div class="Header_actions__3NV5j">
                         <div class="Header_progress-bar__j-Wm9">
@@ -386,7 +388,7 @@
                             <header class="wrapper">
                                 <h1 class="Heading_heading__VnWS7">Mô hình Client - Server là gì?</h1>
                                 <p class="Heading_updated__LqCQ8">Cập nhật tháng 11 năm 2022</p>
-                            </header><button class="Video_addNote__J7xMM" data-tour="notes-tutorial"><svg
+                            </header><button (click)="addNoteInTime()" class="Video_addNote__J7xMM" data-tour="notes-tutorial"><svg
                                     aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus"
                                     class="svg-inline--fa fa-plus " role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
@@ -394,7 +396,7 @@
                                         d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z">
                                     </path>
                                 </svg><span class="Video_label__02ile">Thêm ghi chú tại <span
-                                        class="Video_num__C8TPx">00:00</span></span></button>
+                                        >{{TimeGhiChu}}</span></span></button>
                         </div>
                         <div class="MarkdownParser_wrapper__JYN63" style="--font-size:1.6rem; --line-height:2;">
                             <p>Tham gia các cộng đồng để cùng học hỏi, chia sẻ và "thám thính" xem F4 sắp có gì mới nhé!
@@ -455,6 +457,75 @@
                                 d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z">
                             </path>
                         </svg><span class="ActionButton_title__UG43u">Hỏi đáp</span></button></div>
+                <div  *ngIf="isAddNote" class="CreateNote_wrapper__ubDuR">
+                    <div  class="CreateNote_inner__xqtS5" >
+                        <h2  class="CreateNote_heading__ubCFo">Thêm ghi chú tại <span>{{ TimeGhiChu }}</span></h2>
+                        <div class="">
+                            <div class="Editor_createContent__6wwgd">
+                                <div id="rdw-wrapper-4679" class="Editor_editorWrapper__qDz0j rdw-editor-wrapper"
+                                    aria-label="rdw-wrapper">
+                                    <div class="rdw-editor-toolbar Editor_editorToolbar__mgIip" aria-label="rdw-toolbar"
+                                        aria-hidden="false" style="visibility: visible;">
+                                        <div class="rdw-block-wrapper" aria-label="rdw-block-control">
+                                            <div class="rdw-dropdown-wrapper rdw-block-dropdown"
+                                                aria-label="rdw-dropdown" aria-expanded="false"><a
+                                                    class="rdw-dropdown-selectedtext"
+                                                    title="Block Type"><span>Normal</span>
+                                                    <div class="rdw-dropdown-carettoopen"></div>
+                                                </a></div>
+                                        </div>
+                                        <div class="rdw-inline-wrapper" aria-label="rdw-inline-control">
+                                            <div class="rdw-option-wrapper" aria-selected="false" title="Bold"><img
+                                                    alt=""
+                                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYuMjM2IDBjMS42NTIgMCAyLjk0LjI5OCAzLjg2Ni44OTMuOTI1LjU5NSAxLjM4OCAxLjQ4NSAxLjM4OCAyLjY2OSAwIC42MDEtLjE3MyAxLjEzOS0uNTE2IDEuNjEtLjM0My40NzQtLjg0NC44My0xLjQ5OSAxLjA2OC44NDMuMTY3IDEuNDc0LjUyMyAxLjg5NSAxLjA3MS40MTkuNTUuNjMgMS4xODMuNjMgMS45MDMgMCAxLjI0NS0uNDQ0IDIuMTg3LTEuMzMgMi44MjUtLjg4Ni42NDEtMi4xNDQuOTYxLTMuNzY5Ljk2MUgwdi0yLjE2N2gxLjQ5NFYyLjE2N0gwVjBoNi4yMzZ6TTQuMzA4IDUuNDQ2aDIuMDI0Yy43NTIgMCAxLjMzLS4xNDMgMS43MzQtLjQzLjQwNS0uMjg1LjYwOC0uNzAxLjYwOC0xLjI1IDAtLjYtLjIwNC0xLjA0NC0uNjEyLTEuMzMtLjQwOC0uMjg2LTEuMDE2LS40MjctMS44MjYtLjQyN0g0LjMwOHYzLjQzN3ptMCAxLjgwNFYxMWgyLjU5M2MuNzQ3IDAgMS4zMTQtLjE1MiAxLjcwNy0uNDUyLjM5LS4zLjU4OC0uNzQ1LjU4OC0xLjMzNCAwLS42MzYtLjE2OC0xLjEyNC0uNS0xLjQ2LS4zMzYtLjMzNS0uODY0LS41MDQtMS41ODItLjUwNEg0LjMwOHoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==">
+                                            </div>
+                                            <div class="rdw-option-wrapper" aria-selected="false" title="Italic"><img
+                                                    alt=""
+                                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTcgM1YyaDR2MUg5Ljc1M2wtMyAxMEg4djFINHYtMWgxLjI0N2wzLTEwSDd6Ii8+PC9zdmc+">
+                                            </div>
+                                        </div>
+                                        <div class="rdw-list-wrapper" aria-label="rdw-list-control">
+                                            <div class="rdw-option-wrapper" aria-selected="false" title="Unordered"><img
+                                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMS43MiAzLjQyN2MuOTUxIDAgMS43MjItLjc2OCAxLjcyMi0xLjcwOFMyLjY3LjAxIDEuNzIuMDFDLjc3LjAwOCAwIC43NzUgMCAxLjcxNWMwIC45NC43NzQgMS43MTEgMS43MiAxLjcxMXptMC0yLjYyNWMuNTEgMCAuOTIyLjQxMi45MjIuOTE0YS45Mi45MiAwIDAgMS0xLjg0MiAwIC45Mi45MiAwIDAgMSAuOTItLjkxNHpNMS43MiA4LjcwM2MuOTUxIDAgMS43MjItLjc2OCAxLjcyMi0xLjcwOFMyLjY3IDUuMjg3IDEuNzIgNS4yODdDLjc3IDUuMjg3IDAgNi4wNTIgMCA2Ljk5NXMuNzc0IDEuNzA4IDEuNzIgMS43MDh6bTAtMi42MjJjLjUxIDAgLjkyMi40MTIuOTIyLjkxNGEuOTIuOTIgMCAwIDEtMS44NDIgMGMwLS41MDUuNDE1LS45MTQuOTItLjkxNHpNMS43MiAxMy45ODJjLjk1MSAwIDEuNzIyLS43NjggMS43MjItMS43MDggMC0uOTQzLS43NzQtMS43MDgtMS43MjEtMS43MDgtLjk0NyAwLTEuNzIxLjc2OC0xLjcyMSAxLjcwOHMuNzc0IDEuNzA4IDEuNzIgMS43MDh6bTAtMi42MjVjLjUxIDAgLjkyMi40MTIuOTIyLjkxNGEuOTIuOTIgMCAxIDEtMS44NDIgMCAuOTIuOTIgMCAwIDEgLjkyLS45MTR6TTUuNzQ0IDIuMTE1aDkuODQ1YS40LjQgMCAwIDAgLjQwMS0uMzk5LjQuNCAwIDAgMC0uNDAxLS4zOTlINS43NDRhLjQuNCAwIDAgMC0uNDAyLjM5OS40LjQgMCAwIDAgLjQwMi4zOTl6TTUuNzQ0IDcuMzk0aDkuODQ1YS40LjQgMCAwIDAgLjQwMS0uMzk5LjQuNCAwIDAgMC0uNDAxLS4zOThINS43NDRhLjQuNCAwIDAgMC0uNDAyLjM5OC40LjQgMCAwIDAgLjQwMi4zOTl6TTUuNzQ0IDEyLjY3aDkuODQ1YS40LjQgMCAwIDAgLjQwMS0uMzk5LjQuNCAwIDAgMC0uNDAxLS4zOTlINS43NDRhLjQuNCAwIDAgMC0uNDAyLjQuNC40IDAgMCAwIC40MDIuMzk4eiIvPjwvZz48L3N2Zz4="
+                                                    alt=""></div>
+                                            <div class="rdw-option-wrapper" aria-selected="false" title="Ordered"><img
+                                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNC4yMDIgMS40NjZoOC4xNWMuMzM4IDAgLjYxMi0uMzIyLjYxMi0uNzIgMC0uMzk3LS4yNzQtLjcyLS42MTItLjcyaC04LjE1Yy0uMzM4IDAtLjYxMS4zMjMtLjYxMS43MiAwIC4zOTguMjczLjcyLjYxLjcyek0xMi4zNTIgNS43ODNoLTguMTVjLS4zMzggMC0uNjExLjMyMi0uNjExLjcyIDAgLjM5Ny4yNzMuNzIuNjEuNzJoOC4xNTFjLjMzOCAwIC42MTItLjMyMy42MTItLjcyIDAtLjM5OC0uMjc0LS43Mi0uNjEyLS43MnpNMTIuMzUyIDExLjU0aC04LjE1Yy0uMzM4IDAtLjYxMS4zMjItLjYxMS43MiAwIC4zOTYuMjczLjcxOS42MS43MTloOC4xNTFjLjMzOCAwIC42MTItLjMyMy42MTItLjcyIDAtLjM5Ny0uMjc0LS43Mi0uNjEyLS43MnpNLjc2NyAxLjI0OXYxLjgwMmMwIC4xOTUuMTM2LjM0My4zMTUuMzQzLjE3NiAwIC4zMTUtLjE1LjMxNS0uMzQzVi4zNTZjMC0uMTktLjEzMy0uMzM5LS4zMDItLjMzOS0uMTQ4IDAtLjIyMy4xMTgtLjI0Ny4xNTZhLjIyOC4yMjggMCAwIDAtLjAwMy4wMDVMLjU3OS42MjFhLjQ3NC40NzQgMCAwIDAtLjA5OC4yNzNjMCAuMTk0LjEyOC4zNTEuMjg2LjM1NXpNLjM1MiA4LjE5SDEuNTVjLjE1NyAwIC4yODUtLjE2Mi4yODUtLjM2MiAwLS4xOTgtLjEyOC0uMzU5LS4yODUtLjM1OUguNjh2LS4wMDZjMC0uMTA3LjIxLS4yODEuMzc4LS40MjIuMzM2LS4yNzguNzUzLS42MjUuNzUzLTEuMjI2IDAtLjU3LS4zNzYtMS0uODc0LTEtLjQ3NyAwLS44MzYuMzg1LS44MzYuODk3IDAgLjI5Ny4xNjQuNDAyLjMwNS40MDIuMiAwIC4zMjEtLjE3Ni4zMjEtLjM0NiAwLS4xMDYuMDIzLS4yMjguMjA0LS4yMjguMjQzIDAgLjI1LjI1NC4yNS4yODMgMCAuMjI4LS4yNTIuNDQyLS40OTUuNjQ5LS4zMDEuMjU1LS42NDIuNTQ0LS42NDIuOTkydi4zODRjMCAuMjA1LjE1OS4zNDMuMzA4LjM0M3pNMS43NyAxMC41NDNjMC0uNTkyLS4yOTYtLjkzMS0uODE0LS45MzEtLjY4IDAtLjg1OS41Ny0uODU5Ljg3MiAwIC4zNTEuMjIyLjM5LjMxOC4zOS4xODUgMCAuMzEtLjE0OC4zMS0uMzY2IDAtLjA4NC4wMjYtLjE4MS4yMjQtLjE4MS4xNDIgMCAuMi4wMjQuMi4yNjcgMCAuMjM3LS4wNDMuMjYzLS4yMTMuMjYzLS4xNjQgMC0uMjg4LjE1Mi0uMjg4LjM1NCAwIC4yLjEyNS4zNS4yOTEuMzUuMjI1IDAgLjI3LjEwOC4yNy4yODN2LjA3NWMwIC4yOTQtLjA5Ny4zNS0uMjc3LjM1LS4yNDggMC0uMjY3LS4xNS0uMjY3LS4xOTcgMC0uMTc0LS4wOTgtLjM1LS4zMTctLjM1LS4xOTIgMC0uMzA3LjE0MS0uMzA3LjM3OCAwIC40My4zMTMuODg4Ljg5NS44ODguNTY0IDAgLjkwMS0uNC45MDEtMS4wN3YtLjA3NGMwLS4yNzQtLjA3NC0uNTAyLS4yMTQtLjY2Ni4wOTYtLjE2My4xNDgtLjM4LjE0OC0uNjM1eiIvPjwvZz48L3N2Zz4="
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="Editor_editor__3VaCY rdw-editor-main">
+                                        <div class="DraftEditor-root">
+                                            <div class="public-DraftEditorPlaceholder-root">
+                                                <div class="public-DraftEditorPlaceholder-inner" id="placeholder-74ku6"
+                                                    style="white-space: pre-wrap;">Nội dung ghi chú...</div>
+                                            </div>
+                                            <div class="DraftEditor-editorContainer">
+                                                <div aria-describedby="placeholder-74ku6" aria-label="rdw-editor"
+                                                    class="notranslate public-DraftEditor-content"
+                                                    contenteditable="true" role="textbox" spellcheck="false"
+                                                    style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
+                                                    <div data-contents="true">
+                                                        <div class="" data-block="true" data-editor="74ku6"
+                                                            data-offset-key="7m7up-0-0">
+                                                            <div data-offset-key="7m7up-0-0"
+                                                                class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+                                                                <span data-offset-key="7m7up-0-0"><br
+                                                                        data-text="true"></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Editor_editorActions__j9wTZ"><button
+                                    class="Button_btn__RW1e2 Editor_cancelBtn__uCcnv">Hủy bỏ</button><button
+                                    class="Button_btn__RW1e2 Button_primary__86yfm Button_disabled__1cmvp undefined">Tạo
+                                    ghi chú</button></div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <div class="Toastify"></div>
