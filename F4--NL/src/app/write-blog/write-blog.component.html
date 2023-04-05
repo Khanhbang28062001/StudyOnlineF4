@@ -1,0 +1,219 @@
+<head>
+    <meta charset="utf-8">
+    <title> Viết Blog </title>
+    <link href="write-blog.component.css" rel="stylesheet">
+</head>
+
+<body style="overflow-y: overlay; overflow-x: unset;">
+    <div id="root">
+        <div class="NavBar_wrapper__4m3K5" id="header">
+            <div class="NavBar_logo__Rgo-5">
+                <a href="/home-page-st">
+                    <img src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                        alt="F4">
+                </a>
+                <a href="/home-page-st" class="NavBar_backHome__U1RTm">
+                    <h4 class="NavBar_logoHeading__bs7MP">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                            class="svg-inline--fa fa-chevron-left " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path fill="currentColor"
+                                d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z">
+                            </path>
+                        </svg>
+                        <span>Quay lại</span>
+                    </h4>
+                </a>
+            </div>
+            <div class="NavBar_body__4Yhth d-flex-center">
+                <div>
+                    <div class="Search_wrapper__Bwvae d-flex-center" aria-expanded="false">
+                        <div class="Search_searchIcon__-23JY"></div>
+                        <input class="Search_input__GnMba" spellcheck="false"
+                            placeholder="Tìm kiếm khóa học, bài viết, video, ..." value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="NavBar_actions__nSNzo">
+                <div id="navbar-actions-portal">
+                    <div class="NewPost_navbar-actions-portals__hT30R">
+                        <div class="NewPost_nav-actions__zzC9x">
+                            <button
+                                class="Button_btn__RW1e2 Button_primary__86yfm Button_disabled__1cmvp NewPost_publish-btn__57tHD">Xuất
+                                bản</button>
+                        </div>
+                    </div>
+                </div>
+                <div><button class="NavBar_myLearn__vCvEB" aria-expanded="false">Khóa học của tôi</button></div>
+                <div>
+                    <div class="NavBar_actionBtn__tzSZd" id="notification-button" aria-expanded="false">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
+                            class="svg-inline--fa fa-bell NavBar_action-icon__l9MxX" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="NavBar_avatar-wrapper__j7jMj" aria-expanded="false">
+                    <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:3.2px;">
+                        <img class="NavBar_avatar__OG7ib"
+                            src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/fallback-avatar.155cdb2376c5d99ea151.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDwaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAOV4dx67OJ8WzQgNglX5wHwYU%2FThVzgoXGTX3NyilvqLAiBRiVsIagR2YgtzKbvwna4TdY2psPGRGIA0HB7x4HEnqyrtAgj1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYxNTMxNTc1MTc3MSIMWS%2BDQbMWb9sbwjanKsECEbbL8IYxw5n3w9xX78lzBkmBZ4Rv%2Fw05McZbgSvpHQmyx5agWm2vNA3sEuDIAK2XzXV%2FalBhcltwjJjEOkCajlC2FqMB8urol9QziAhicwdL0uRoOa3lag08obxs3JP6nh5%2Fv%2FRB%2FVH7Ft8itH5LAqw7Th2eZNgFM8qnbuWpY0GQTzIvb4PWw8ifHInPkCfix14BgHrEa8rf%2BqxYRokY8C5q5eJzqSmxFaUgG54s3ID374pLjXDM2ugsc%2B5OQ2rp0VN7OwiCdcFrl9oTIsNU2ztNPixGFVP%2FKau8RYYD8ivDwyIgKavutsVockVvQvNM10k2s9Kq0rouWcj%2BAxaiInOL19nL%2FcX0mt%2FD5EUHkFNydvYvXucRUUO4WP2Nfl3UaJyE0VE1aqNnvfiXWFqu%2FouGgbsC6Qc8rRXhWtmJYabyMPWtx6AGOrMCLvRFSkBhp7I1%2BeA4QLn1hW3G%2FHJZKJtasqRbcRLjRCcfEmhBP4nelY1sAJ3IRlzKxzFCWJG7G%2B8MCatpQqDYyTYqFUdVIz1UWCifEld0%2FHRKOtfFm7Z7%2FvAqnLcBJK5FXuHprsDbSKkeFy2dbb7%2BemivetbynI9oZX63bd69GBfr9V4KZKm6mFEqUBKcBdC%2BolsCZIEO8LKzr7IKZE0zNWKsuw9UzoZ%2FqAAScSY78be%2BNbv0ShASkw34%2FYUM3FDPoTsX6CatOzf2iiCM7XC0OBHUr90uQ5CqW76jlc8sb1NzE1kikgWnMk3lxvmNA%2BzXu6oF4vt%2FLE547wHMOVLev926RTkm4Hj9k5Y2wGVsmUPhss9XX45ZBGq1S2rfU8bG9a5NtnSNWaprlobfu0GW%2FXY3Ow%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230315T203510Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14400&X-Amz-Credential=ASIAY6Q5NINNXK4XTKOW%2F20230315%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=b498115c5ae7780fe1b68853ca0c76794791e8dfa345f5561920346406d4d931"
+                            alt="I hate you So much">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="index-module_row__-AHgh">
+            <section
+                class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-12__340Ve">
+                <div class="NewPost_wrapper__QUJ12">
+                    <div spellcheck="false" data-empty-text="Tiêu đề" contenteditable="true"
+                        class="ContentEditable_wrapper__YxeRy NewPost_title-input__d-X6s"></div>
+                    <div class="NewPost_text-editor__79Xuj NewPost_disableIcon__wRdBV">
+                        <div class="rc-md-editor  " style="margin-bottom: 31px; height: calc(100vh - 100px);">
+                            <div class="rc-md-navigation visible">
+                                <div class="navigation-nav left">
+                                    <div class="button-wrap">
+                                        <span class="button button-type-header" title="Header">
+                                            <i class="rmel-iconfont rmel-icon-font-size"></i>
+                                            <div class="drop-wrap hidden">
+                                                <ul class="header-list">
+                                                    <li class="list-item">
+                                                        <h1>H1</h1>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <h2>H2</h2>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <h3>H3</h3>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <h4>H4</h4>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <h5>H5</h5>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <h6>H6</h6>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                        <span class="button button-type-bold" title="Bold">
+                                            <i class="rmel-iconfont rmel-icon-bold"></i>
+                                        </span>
+                                        <span class="button button-type-italic" title="Italic">
+                                            <i class="rmel-iconfont rmel-icon-italic"></i>
+                                        </span>
+                                        <span class="button button-type-underline" title="Underline">
+                                            <i class="rmel-iconfont rmel-icon-underline"></i>
+                                        </span>
+                                        <span class="button button-type-strikethrough" title="Strikethrough">
+                                            <i class="rmel-iconfont rmel-icon-strikethrough"></i>
+                                        </span>
+                                        <span class="button button-type-unordered" title="Unordered list">
+                                            <i class="rmel-iconfont rmel-icon-list-unordered"></i>
+                                        </span>
+                                        <span class="button button-type-ordered" title="Ordered list">
+                                            <i class="rmel-iconfont rmel-icon-list-ordered"></i>
+                                        </span>
+                                        <span class="button button-type-quote" title="Quote">
+                                            <i class="rmel-iconfont rmel-icon-quote"></i>
+                                        </span>
+                                        <span class="button button-type-wrap" title="Line break">
+                                            <i class="rmel-iconfont rmel-icon-wrap"></i>
+                                        </span>
+                                        <span class="button button-type-code-inline" title="Inline code">
+                                            <i class="rmel-iconfont rmel-icon-code"></i>
+                                        </span>
+                                        <span class="button button-type-code-block" title="Code">
+                                            <i class="rmel-iconfont rmel-icon-code-block"></i>
+                                        </span>
+                                        <span class="button button-type-table" title="Table">
+                                            <i class="rmel-iconfont rmel-icon-grid"></i>
+                                            <div class="drop-wrap hidden">
+                                                <ul class="table-list wrap" style="width: 135px; height: 89px;">
+                                                    <li class="list-item " style="top: 0px; left: 0px;"></li>
+                                                    <li class="list-item " style="top: 0px; left: 23px;"></li>
+                                                    <li class="list-item " style="top: 0px; left: 46px;"></li>
+                                                    <li class="list-item " style="top: 0px; left: 69px;"></li>
+                                                    <li class="list-item " style="top: 0px; left: 92px;"></li>
+                                                    <li class="list-item " style="top: 0px; left: 115px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 0px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 23px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 46px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 69px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 92px;"></li>
+                                                    <li class="list-item " style="top: 23px; left: 115px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 0px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 23px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 46px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 69px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 92px;"></li>
+                                                    <li class="list-item " style="top: 46px; left: 115px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 0px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 23px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 46px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 69px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 92px;"></li>
+                                                    <li class="list-item " style="top: 69px; left: 115px;"></li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                        <span class="button button-type-image" title="Image">
+                                            <i class="rmel-iconfont rmel-icon-image"></i>
+                                        </span>
+                                        <span class="button button-type-link" title="Link">
+                                            <i class="rmel-iconfont rmel-icon-link"></i>
+                                        </span>
+                                        <span class="button button-type-clear" title="Clear">
+                                            <i class="rmel-iconfont rmel-icon-delete"></i>
+                                        </span>
+                                        <span class="button button-type-undo disabled" title="Undo">
+                                            <i class="rmel-iconfont rmel-icon-undo"></i>
+                                        </span>
+                                        <span class="button button-type-redo disabled" title="Redo">
+                                            <i class="rmel-iconfont rmel-icon-redo"></i>
+                                        </span>
+                                        <span class="button" title=""
+                                            style="cursor: default; margin-left: 16px; font-size: 1.3rem; color: rgb(117, 117, 117);"></span>
+                                    </div>
+                                </div>
+                                <div class="navigation-nav right">
+                                    <div class="button-wrap">
+                                        <span class="button button-type-mode" title="Only display editor">
+                                            <i class="rmel-iconfont rmel-icon-keyboard"></i>
+                                        </span>
+                                        <span class="button button-type-fullscreen" title="Full screen">
+                                            <i class="rmel-iconfont rmel-icon-fullscreen"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="editor-container">
+                                <section class="section sec-md visible">
+                                    <textarea name="textarea" placeholder="Nội dung viết ở đây"
+                                        class="section-container input MdTextEditor_editor__7rfC-"
+                                        wrap="hard"></textarea>
+                                </section>
+                                <section class="section sec-html visible">
+                                    <div class="section-container html-wrap">
+                                        <div class="MarkdownParser_wrapper__JYN63 MdTextEditor_wrapper__l6fFu"></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+        <div class="Toastify"></div>
+    </div>
+</body>

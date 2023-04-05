@@ -1,0 +1,126 @@
+
+@import url(../static1/css/main.b2b22e6b.css);
+@import url(../static1/css/style.css);
+/* .Login_wrapper {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Login_wrapper:not(.Login_hasBg) {
+    background-color: rgba(0,0,0,.6)
+}
+
+.Login_wrapper.Login_hasBg::after,.Login_wrapper.Login_hasBg::before {
+    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url('../assets/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png');
+    background-size: cover;
+    bottom: -5px;
+    content: "";
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    left: -5px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: -1
+}
+
+.Login_wrapper.Login_hasBg::after {
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('../assets/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png');
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    z-index: 1
+}
+
+@media(max-width: 1920px) {
+    .Login_wrapper.Login_hasBg::after {
+        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('../assets/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png')
+    }
+}
+
+@media(max-width: 1366px) {
+    .Login_wrapper.Login_hasBg::after {
+        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('../assets/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png')
+    }
+}
+
+.Login_header {
+    overflow: hidden
+}
+
+.Login_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    z-index: 2
+}
+
+.Login_content {
+    --width: 640px;
+    background: #fff;
+    border-radius: 8px;
+    max-width: calc(100vw - 32px);
+    min-height: 600px;
+    padding: 48px 16px;
+    position: relative;
+    width: var(--width)
+}
+
+.Login_logo {
+    border-radius: 8px;
+    height: 44px;
+    object-fit: cover;
+    width: 44px
+}
+
+.Login_title {
+    margin: 20px 0;
+    color: #292929;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+
+
+.Login_body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.login-btn {
+    display: block;
+    float: right;
+}
+
+.hasAccount {
+    display: inline-block;
+    margin-top: 52px;
+}
+
+.Login_acceptTerm{
+    text-align: center;
+    bottom: 0;
+    color: #666;
+    font-size: 1.1rem;
+    left: 10px;
+    line-height: 1.6;
+    padding: 12px 132px;
+    position: absolute;
+    right: 10px;
+}
+.Login_acceptTerm a {
+    text-decoration: underline;
+} */
