@@ -23,6 +23,7 @@ import { WriteBlogComponent } from './write-blog/write-blog.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
 import { HomepageUserComponent } from './homepage-user/homepage-user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { HomepageUserComponent } from './homepage-user/homepage-user.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
