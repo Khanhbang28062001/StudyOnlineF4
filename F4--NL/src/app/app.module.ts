@@ -1,7 +1,11 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppComponent } from './app.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { AdminComponent } from './admin/admin.component';
@@ -23,7 +27,7 @@ import { WriteBlogComponent } from './write-blog/write-blog.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
 import { HomepageUserComponent } from './homepage-user/homepage-user.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -47,13 +51,17 @@ import { FormsModule } from '@angular/forms';
     WriteBlogComponent,
     HomePageStComponent,
     HomepageGvComponent,
-    HomepageUserComponent
+    HomepageUserComponent,
+    
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

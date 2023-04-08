@@ -2551,3 +2551,18 @@ input.inputNote.ng-valid.ng-touched.ng-dirty {
     border: none;
     background-color: #ffffff00;
 }
+textarea.NewPost_wrapper__QUJ12.ng-untouched.ng-pristine.ng-valid {
+    background: #fff0;
+    border: none;
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-size: 14px;
+    height: 100%;
+    line-height: 1.7;
+    min-height: 0;
+    outline: none;
+    overflow-y: scroll;
+    resize: none;
+    width: 100%;
+}

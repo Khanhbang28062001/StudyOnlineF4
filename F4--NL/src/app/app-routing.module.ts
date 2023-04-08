@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
+
 
 const routes: Routes = [
   { path: 'add-course', component: AddCourseComponent},
