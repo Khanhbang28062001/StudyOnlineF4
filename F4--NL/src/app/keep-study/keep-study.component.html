@@ -51,7 +51,7 @@
                                 <path fill="currentColor"
                                     d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128z">
                                 </path>
-                            </svg><span class="Header_label__1K6P4">Ghi chú</span></button><button
+                            </svg><span class="Header_label__1K6P4" (click)="openNote()" >Ghi chú</span></button><button
                             class="Header_action-btn__v9NQY Header_help-btn__WsMLg"><svg aria-hidden="true"
                                 focusable="false" data-prefix="fas" data-icon="circle-question"
                                 class="svg-inline--fa fa-circle-question Header_icon__2EjW3" role="img"
@@ -371,7 +371,7 @@
                             <div class="VideoPlayer_wrapper__s0KXB">
                                 <div class="VideoPlayer_player__CA18S" style="width: 100%; height: 100%;">
                                     <div class="react-player__preview" tabindex="0"
-                                        style="width: 100%; height: 100%; background-size: cover; background-position: center center; cursor: pointer; display: flex; align-items: center; justify-content: center; background-image: url(&quot;https://i.ytimg.com/vi/zoELAirXMJY/maxresdefault.jpg&quot;);">
+                                        style="width: 100%; height: 100%; background-size: cover; background-position: center center; cursor: pointer; display: flex; align-items: center; justify-content: center; background-image: url(https://i.ytimg.com/vi/zoELAirXMJY/maxresdefault.jpg);">
                                         <div class="react-player__shadow"
                                             style="background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 60%); border-radius: 64px; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;">
                                             <div class="react-player__play-icon"
@@ -388,30 +388,19 @@
                             <header class="wrapper">
                                 <h1 class="Heading_heading__VnWS7">Mô hình Client - Server là gì?</h1>
                                 <p class="Heading_updated__LqCQ8">Cập nhật tháng 11 năm 2022</p>
-                            </header><button (click)="addNoteInTime()" class="Video_addNote__J7xMM" data-tour="notes-tutorial"><svg
-                                    aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus"
-                                    class="svg-inline--fa fa-plus " role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512">
+                            </header><button (click)="addNoteInTime()" class="Video_addNote__J7xMM"
+                                data-tour="notes-tutorial"><svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                    data-icon="plus" class="svg-inline--fa fa-plus " role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path fill="currentColor"
                                         d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z">
                                     </path>
-                                </svg><span class="Video_label__02ile">Thêm ghi chú tại <span
-                                        >{{TimeGhiChu}}</span></span></button>
+                                </svg><span class="Video_label__02ile">Thêm ghi chú tại
+                                    <span>{{TimeGhiChu}}</span></span></button>
                         </div>
                         <div class="MarkdownParser_wrapper__JYN63" style="--font-size:1.6rem; --line-height:2;">
                             <p>Tham gia các cộng đồng để cùng học hỏi, chia sẻ và "thám thính" xem F4 sắp có gì mới nhé!
                             </p>
-                            <!-- <ul>
-                                <li>Fanpage: <a href="https://www.facebook.com/f8vnofficial" target="_blank"
-                                        rel="noreferrer">https://www.facebook.com/f8vnofficial</a></li>
-                                <li>Group: <a href="https://www.facebook.com/groups/649972919142215" target="_blank"
-                                        rel="noreferrer">https://www.facebook.com/groups/649972919142215</a></li>
-                                <li>Youtube: <a
-                                        href="/external-url?continue=https%3A%2F%2Fwww.youtube.com%2FF8VNOfficial"
-                                        target="_blank" rel="noreferrer">https://www.youtube.com/F8VNOfficial</a></li>
-                                <li>Sơn Đặng: <a href="/external-url?continue=https%3A%2F%2Fwww.facebook.com%2Fsondnf8"
-                                        target="_blank" rel="noreferrer">https://www.facebook.com/sondnf8</a></li>
-                            </ul> -->
                         </div>
                     </div>
                     <p class="Powered_wrapper__gMw0S">Made with <svg aria-hidden="true" focusable="false"
@@ -457,9 +446,9 @@
                                 d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z">
                             </path>
                         </svg><span class="ActionButton_title__UG43u">Hỏi đáp</span></button></div>
-                <div  *ngIf="isAddNote" class="CreateNote_wrapper__ubDuR">
-                    <div  class="CreateNote_inner__xqtS5" >
-                        <h2  class="CreateNote_heading__ubCFo">Thêm ghi chú tại <span>{{ TimeGhiChu }}</span></h2>
+                <div *ngIf="isAddNote" class="CreateNote_wrapper__ubDuR">
+                    <div class="CreateNote_inner__xqtS5">
+                        <h2 class="CreateNote_heading__ubCFo">Thêm ghi chú tại <span>{{ TimeGhiChu }}</span></h2>
                         <div class="">
                             <div class="Editor_createContent__6wwgd">
                                 <div id="rdw-wrapper-4679" class="Editor_editorWrapper__qDz0j rdw-editor-wrapper"
@@ -475,7 +464,7 @@
                                                 </a></div>
                                         </div>
                                         <div class="rdw-inline-wrapper" aria-label="rdw-inline-control">
-                                            <div class="rdw-option-wrapper" aria-selected="false" title="Bold"><img
+                                            <div class="rdw-option-wrapper" aria-selected="false" title="Bold" ><img
                                                     alt=""
                                                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYuMjM2IDBjMS42NTIgMCAyLjk0LjI5OCAzLjg2Ni44OTMuOTI1LjU5NSAxLjM4OCAxLjQ4NSAxLjM4OCAyLjY2OSAwIC42MDEtLjE3MyAxLjEzOS0uNTE2IDEuNjEtLjM0My40NzQtLjg0NC44My0xLjQ5OSAxLjA2OC44NDMuMTY3IDEuNDc0LjUyMyAxLjg5NSAxLjA3MS40MTkuNTUuNjMgMS4xODMuNjMgMS45MDMgMCAxLjI0NS0uNDQ0IDIuMTg3LTEuMzMgMi44MjUtLjg4Ni42NDEtMi4xNDQuOTYxLTMuNzY5Ljk2MUgwdi0yLjE2N2gxLjQ5NFYyLjE2N0gwVjBoNi4yMzZ6TTQuMzA4IDUuNDQ2aDIuMDI0Yy43NTIgMCAxLjMzLS4xNDMgMS43MzQtLjQzLjQwNS0uMjg1LjYwOC0uNzAxLjYwOC0xLjI1IDAtLjYtLjIwNC0xLjA0NC0uNjEyLTEuMzMtLjQwOC0uMjg2LTEuMDE2LS40MjctMS44MjYtLjQyN0g0LjMwOHYzLjQzN3ptMCAxLjgwNFYxMWgyLjU5M2MuNzQ3IDAgMS4zMTQtLjE1MiAxLjcwNy0uNDUyLjM5LS4zLjU4OC0uNzQ1LjU4OC0xLjMzNCAwLS42MzYtLjE2OC0xLjEyNC0uNS0xLjQ2LS4zMzYtLjMzNS0uODY0LS41MDQtMS41ODItLjUwNEg0LjMwOHoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==">
                                             </div>
@@ -497,22 +486,15 @@
                                         <div class="DraftEditor-root">
                                             <div class="public-DraftEditorPlaceholder-root">
                                                 <div class="public-DraftEditorPlaceholder-inner" id="placeholder-74ku6"
-                                                    style="white-space: pre-wrap;">Nội dung ghi chú...</div>
+                                                    style="white-space: pre-wrap;"  >{{NoiDungGhiChu}}</div>
                                             </div>
                                             <div class="DraftEditor-editorContainer">
                                                 <div aria-describedby="placeholder-74ku6" aria-label="rdw-editor"
                                                     class="notranslate public-DraftEditor-content"
                                                     contenteditable="true" role="textbox" spellcheck="false"
                                                     style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
-                                                    <div data-contents="true">
-                                                        <div class="" data-block="true" data-editor="74ku6"
-                                                            data-offset-key="7m7up-0-0">
-                                                            <div data-offset-key="7m7up-0-0"
-                                                                class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
-                                                                <span data-offset-key="7m7up-0-0"><br
-                                                                        data-text="true"></span></div>
-                                                        </div>
-                                                    </div>
+                                                    <input  [(ngModel)]="contentNote" (click)="addContent()"  class="inputNote" type="text">
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -520,15 +502,48 @@
                                 </div>
                             </div>
                             <div class="Editor_editorActions__j9wTZ"><button
-                                    class="Button_btn__RW1e2 Editor_cancelBtn__uCcnv">Hủy bỏ</button><button
-                                    class="Button_btn__RW1e2 Button_primary__86yfm Button_disabled__1cmvp undefined">Tạo
-                                    ghi chú</button></div>
+                                    class="Button_btn__RW1e2 Editor_cancelBtn__uCcnv" (click)="closeAddNote()" >Hủy bỏ</button><button
+                                    class="Button_btn__RW1e2 Button_primary__86yfm {{ButtonDisabled}}" (click)="addNote()">Tạo ghi chú</button></div>
+
                         </div>
                     </div>
                 </div>
             </section>
         </div>
         <div class="Toastify"></div>
+    </div>
+    <div class="VerticalModal_wrapper__4GY83 {{name}}">
+        <div class="VerticalModal_container__3yFkB">
+            <div class="VerticalModal_close-btn__YNy3Q" (click)="closeNote()" ><svg aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512">
+                    <path fill="currentColor"
+                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+                    </path>
+                </svg></div>
+            <div class="VerticalModal_body__wpnMg">
+                <div class="NotesList_wrapper__mB8Mq">
+                    <ul class="NotesList_list__g9Ull">
+                        <header class="NotesList_header__7CQ4e">
+                            <h2 class="NotesList_bigHeading__tquFE">Ghi chú của tôi</h2>
+                            <div><select class="NotesList_selectable__C3Xua">
+                                    <option value="chapter"> Trong chương hiện tại </option>
+                                    <option value="course"> Trong tất cả các chương</option>
+                                </select><select class="NotesList_selectable__C3Xua">
+                                    <option value="latest">Mới nhất</option>
+                                    <option value="oldest">Cũ nhất </option>
+                                </select></div>
+                        </header>
+                        <div class="NotesList_noResult__qLIpq"><img
+                                src="../assets/media/Note.PNG"
+                                alt="Chưa có ghi chú">
+                            <div class="NotesList_heading__7xlN9">Bạn chưa có ghi chú nào</div>
+                            <div class="NotesList_description__uy0fT">Hãy ghi chép để nhớ những gì bạn đã học!</div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

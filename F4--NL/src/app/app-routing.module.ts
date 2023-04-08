@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
@@ -18,6 +18,9 @@ import { StudyRouteComponent } from './study-route/study-route.component';
 import { WriteBlogComponent } from './write-blog/write-blog.component';
 import { AppComponent } from './app.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
+
 
 const routes: Routes = [
   { path: 'add-course', component: AddCourseComponent},
@@ -37,6 +40,8 @@ const routes: Routes = [
   { path: 'study-route-fe', component: StudyRouteFeComponent},
   { path: 'write-blog', component: WriteBlogComponent},
   { path: 'home-page-st', component:HomePageStComponent },
+  { path: 'homepage-gv', component:HomepageGvComponent },
+  { path: 'admin', component:AdminComponent},
   { path: '**', component: AppComponent},
 
 ];

@@ -25,13 +25,14 @@
 
         <div>
           <div (click)="openNavNotification()" class="NavBar_actionBtn__tzSZd" id="notification-button"
-            aria-expanded="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
+             ><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
               class="svg-inline--fa fa-bell NavBar_action-icon__l9MxX" role="img" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512">
               <path fill="currentColor"
                 d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z">
               </path>
             </svg></div>
+            <!-- aria-expanded="false" -->
           <div *ngIf="isDropDownOpenNotification"
             style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-68.8px, 60.8px);">
             <ul class="Tippy-module_wrapper__1s5m5 Notification_container__ulN0K">
@@ -49,7 +50,7 @@
               class="NavBar_avatar__OG7ib"
               src="https://files.fullstack.edu.vn/f8-prod/user_photos/293030/63e71768e42bd.jpg" alt="Khánh Băng"></div>
         </div>
-        <div *ngIf="isDropDownOpen"
+        <div *ngIf="isDropDownOpen" 
           style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-27.2px, 57.6px);">
           <ul class="Tippy-module_wrapper__1s5m5 UserMenu_wrapper__kevhj hide-on-click">
             <div class="UserMenu_user__GXFLp">
@@ -78,7 +79,7 @@
             <hr>
             <ul class="UserMenu_list__FI9-C">
               <li><a class="UserMenu_item__NXwf1" href="/settings/personal">Cài đặt</a></li>
-              <li><span class="UserMenu_item__NXwf1">Đăng xuất</span></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/login-form" routerLinkActive="active" >Đăng xuất</a><router-outlet></router-outlet></li>
             </ul>
           </ul>
         </div>
@@ -665,4 +666,86 @@
     <div class="Toastify"></div>
   </div>
 </body>
+<footer class="Footer_wrapper__RAsdB">
+  <section class="index-module_grid__1q71E index-module_wide__3c1pI" style="max-width: 1100px;">
+    <section class="index-module_row__-AHgh">
+      <section
+        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-3__MjWvb">
+        <div class="Footer_column__Jllii">
+          <div>
+            <div class="Footer_column-top__2kQ8J"><a href="/"><img class="Footer_top-logo__2i6Rn"
+                  src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                  alt="F4"></a>
+              <h2 class="Footer_top-slogan__yvaAt">Học Lập Trình Để Đi Làm</h2>
+            </div>
+            <!-- <p class="Footer_contact-list__UCS+O">Điện thoại: <a href="tel:0246.329.1102">0898.0257.04</a><br>Email:
+              <a href="mailto:contact@fullstack.edu.vn">contact@fullstack.edu.vn</a><br>Địa
+              chỉ: Số 26 Dương Đình Nghệ, Phường Yên Hòa, Quận Cầu Giấy, TP. Hà Nội
+            </p> -->
+
+          </div>
+        </div>
+      </section>
+      <section
+        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
+        <div class="Footer_column__Jllii">
+          <div>
+            <h2 class="Footer_heading__JLn-b">Về F4</h2>
+            <!-- <ul class="Footer_list__pNU8w">
+              <li><a href="/about-us">Giới thiệu</a></li>
+              <li><a href="/contact-us">Liên hệ</a></li>
+              <li><a href="/terms">Điều khoản</a></li>
+              <li><a href="/privacy">Bảo mật</a></li>
+            </ul> -->
+          </div>
+        </div>
+      </section>
+      <section
+        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
+        <div class="Footer_column__Jllii">
+          <div>
+            <h2 class="Footer_heading__JLn-b">Công cụ</h2>
+            <!-- <ul class="Footer_list__pNU8w">
+              <li><a href="https://cv.fullstack.edu.vn/" target="_blank" rel="noreferrer">Tạo
+                  CV xin việc</a></li>
+              <li><a href="/shorten-urls">Rút gọn liên kết</a></li>
+              <li><a href="https://clippy.fullstack.edu.vn/" target="_blank" rel="noreferrer">Clip-path maker</a>
+              </li>
+              <li><a href="https://snippet-generator.fullstack.edu.vn/" target="_blank" rel="noreferrer">Snippet
+                  generator</a></li>
+            </ul> -->
+          </div>
+        </div>
+      </section>
+      <section
+        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-3__MjWvb">
+        <div class="Footer_column__Jllii">
+          <div>
+            <!-- <h2 class="Footer_heading__JLn-b"><a target="_blank"
+                href="https://www.google.com/search?q=C%C3%94NG+TY+C%E1%BB%94+PH%E1%BA%A6N+C%C3%94NG+NGH%E1%BB%86+GI%C3%81O+D%E1%BB%A4C+F8"
+                rel="noreferrer">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</a></h2>
+            <ul class="Footer_list__pNU8w">
+              <li>Mã số thuế: 0109922901</li>
+              <li>Ngày thành lập: 04/03/2022</li>
+              <li>Lĩnh vực: Công nghệ, giáo dục, lập trình. F8 xây dựng và phát triển những
+                sản phẩm mang lại giá trị cho cộng đồng.</li>
+            </ul> -->
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="index-module_row__-AHgh">
+      <section
+        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-12__340Ve">
+        <div class="Footer_bottom__J7kjW">
+          <p class="Footer_copyright__2WB24">© 2018 - 2023 F4. Nền tảng học lập trình hàng đầu
+            Việt Nam</p>
+
+        </div>
+      </section>
+
+    </section>
+  </section>
+</footer>
 <!-- <router-outlet></router-outlet> -->

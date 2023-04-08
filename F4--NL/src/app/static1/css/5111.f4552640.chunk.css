@@ -3718,4 +3718,12 @@
 
 .Main_deactive-modal__dbUJb .Main_contact-email__k8MLT:hover {
     text-decoration: underline;
+
+}
+input.inputNote {
+    width: 100%;
+    height: 90px;
+    border: none;
+    background-color: #ffffff00;
+    outline: none;
 }
