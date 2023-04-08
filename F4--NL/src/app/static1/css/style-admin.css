@@ -1,4 +1,3 @@
-@import url(css.css);
 
 html {
     position: relative;
@@ -117,7 +116,7 @@ body {
     display: block;
     padding: 10px 30px;
     margin: 5px 0;
-    font-size: .9062rem;
+    font-size: 1.2rem;
     position: relative;
     -webkit-transition: all .4s;
     transition: all .4s
@@ -1866,7 +1865,7 @@ body {
 .waves-circle {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
+    /* -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%); */
 }
 
 .waves-button,
@@ -1922,7 +1921,7 @@ body {
 }
 
 .waves-float {
-    -webkit-mask-image: none;
+    /* -webkit-mask-image: none; */
     -webkit-box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, .12);
     box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, .12);
     -webkit-transition: all .3s;
@@ -2378,8 +2377,8 @@ body {
     font-family: summernote;
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/summernote.bin);
-    src: url(../fonts/summernote-1.bin) format("embedded-opentype"), url(../fonts/summernote-2.bin) format("woff"), url(../fonts/summernote-3.bin) format("truetype")
+    /* src: url(../fonts/summernote.bin); */
+    /* src: url(../fonts/summernote-1.bin) format("embedded-opentype"), url(../fonts/summernote-2.bin) format("woff"), url(../fonts/summernote-3.bin) format("truetype") */
 }
 
 .note-editor.note-frame {

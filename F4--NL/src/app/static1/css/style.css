@@ -833,6 +833,7 @@ svg:not(:host).svg-inline--fa {
 }
 
 :root {
+    
     --primary-color: #3823f0;
     --black-color: #000;
     --white-color: #fff;
@@ -1493,6 +1494,7 @@ body.show-notification #sidebar {
 .base-module_button__2kgqC:hover {
     outline: none;
     text-decoration: none
+   
 }
 
 .base-module_button__2kgqC[disabled],
@@ -2542,4 +2544,10 @@ body.show-notification #sidebar {
     to {
         transform: rotate(1turn)
     }
+}
+input.inputNote.ng-valid.ng-touched.ng-dirty {
+    width: 100%;
+    height: 90px;
+    border: none;
+    background-color: #ffffff00;
 }

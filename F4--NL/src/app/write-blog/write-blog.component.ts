@@ -9,6 +9,13 @@ export class WriteBlogComponent implements OnInit {
   public in = "68";
   public name = "";
   public Name = "";
+  isDropDownOpen: boolean = false;
+  isDropDownOpenNotification: boolean = false;
+  isDropDownOpenBlog: boolean = false;
+  public TenEmail = "bang";
+  public Email = "bang-Email";
+
+  
   constructor() { }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
@@ -18,5 +25,21 @@ export class WriteBlogComponent implements OnInit {
     console.log(this.Name);
   }
 
+   
+  openNavProfile(): void{
+    this.isDropDownOpen = !this.isDropDownOpen;
+    this.isDropDownOpenNotification= false;
+    this.isDropDownOpenBlog= false;
+  }
+  openNavNotification(): void{
+    this.isDropDownOpenNotification= !this.isDropDownOpenNotification;
+    this.isDropDownOpen = false;
+    this.isDropDownOpenBlog= false;
+  }
+  openNavBlog(): void{
+    this.isDropDownOpenBlog= !this.isDropDownOpenBlog;
+    this.isDropDownOpen = false;
+    this.isDropDownOpenNotification= false;
+  }
 
 }

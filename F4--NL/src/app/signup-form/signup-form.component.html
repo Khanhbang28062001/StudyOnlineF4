@@ -29,16 +29,15 @@
                                     <div class="FormInput_wrapper__agiKS">
                                         <div class="FormInput_labelGroup__pDJ+V"><label class="FormInput_label__kIc-w">Tên
                                                 của bạn?</label></div>
-                                        <div class="FormInput_inputWrap__mjtRx"><input placeholder="Họ và tên của bạn"
+                                        <div class="FormInput_inputWrap__mjtRx"><input [(ngModel)]="inputName" placeholder="Họ và tên của bạn"
                                                 name="display_name" maxlength="50" value=""></div>
                                     </div>
                                 </div>
                                 <div class="FormControl_wrapper__WJGST">
                                     <div class="FormInput_wrapper__agiKS">
                                         <div class="FormInput_labelGroup__pDJ+V"><label class="FormInput_label__kIc-w">Số
-                                                điện thoại</label><label
-                                                class="FormInput_label__kIc-w FormInput_right__y8Rz2">Đăng ký với
-                                                email</label></div>
+                                                điện thoại</label>
+                                                </div>
                                         <div class="FormInput_inputWrap__mjtRx">
                                             <div class="FormSelect_wrapper__glPyO FormSelect_insideInput__zG6A1">
                                                 <div class="FormSelect_label__Xkoy1" aria-expanded="false"><span>VN
@@ -50,7 +49,7 @@
                                                             d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
                                                         </path>
                                                     </svg></div>
-                                            </div><input type="text" placeholder="Số điện thoại" name="phone" maxlength="12"
+                                            </div><input [(ngModel)]="numberPhone" type="text" placeholder="Số điện thoại" name="phone" maxlength="12"
                                                 value="">
                                         </div>
                                     </div>
@@ -58,21 +57,20 @@
                                 <div class="FormControl_wrapper__WJGST">
                                     <div class="FormInput_wrapper__agiKS">
                                         <div class="FormInput_labelGroup__pDJ+V"></div>
-                                        <div class="FormInput_inputWrap__mjtRx"><input disabled="" name="phone_code"
-                                                placeholder="Nhập mã xác nhận" type="number" maxlength="6" value="">
-                                            <div class="FormInput_rightBtn__2FZ8H FormInput_disabled__fCp98"><span>Gửi
+                                        <div class="FormInput_inputWrap__mjtRx"><input [(ngModel)]="passCode" name="phone_code"
+                                                placeholder="Nhập mã xác nhận" type="number" maxlength="6" value="" disabled="">
+                                            <div class="FormInput_rightBtn__2FZ8H " (click)="getPassCode()"><span id="base-module_text__1MM8s">Gửi
                                                     mã</span></div>
                                         </div>
                                     </div>
                                 </div><button
                                     class="ranks-module_primary__3Sh2z base-module_button__2kgqC sizes-module_m__2XF5n Login_submitBtn__h5Ikm tooltip-module_tooltip__3Q4cn"
-                                    disabled="" type="button">
+                                     type="button" (click)="inputSignUp()">
                                     <div class="base-module_inner__182n1 sizes-module_inner__3Ua2h"><span
                                             class="base-module_text__1MM8s">Đăng ký</span></div>
                                 </button>
                             </div>
-                            <p class="Login_dontHaveAcc__l0kxL">Bạn đã có tài khoản? <a
-                                    href="/login?continue=https%3A%2F%2Ffullstack.edu.vn%2Fnew-post">Đăng nhập</a></p>
+                            <p class="Login_dontHaveAcc__l0kxL">Bạn đã có tài khoản? <a routerLink="/login-form" routerLinkActive="active">Đăng nhập</a><router-outlet></router-outlet></p>
                         </div>
                         <div class="Login_acceptTerm__y3Imp">Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý
                             với <a href="https://fullstack.edu.vn/terms">Điều khoản sử dụng</a> của chúng tôi.</div>

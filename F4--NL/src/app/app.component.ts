@@ -17,6 +17,9 @@ import { StudyRouteBeComponent } from './study-route-be/study-route-be.component
 import { StudyRouteFeComponent } from './study-route-fe/study-route-fe.component';
 import { StudyRouteComponent } from './study-route/study-route.component';
 import { WriteBlogComponent } from './write-blog/write-blog.component';
+import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
+import { AdminComponent } from './admin/admin.component';
+
 const routes: Routes = [
   { path: 'add-course', component: AddCourseComponent},
   { path: 'bookmark', component: BookmarkComponent},
@@ -35,6 +38,8 @@ const routes: Routes = [
   { path: 'study-route-fe', component: StudyRouteFeComponent},
   { path: 'write-blog', component: WriteBlogComponent},
   { path: 'home-page-st', component:HomePageStComponent },
+  { path: 'homepage-gv', component:HomepageGvComponent },
+  { path: 'admin', component:AdminComponent}
   
 
 ];
@@ -45,5 +50,23 @@ const routes: Routes = [
 })
 export class AppComponent {
   title = 'F4--NL';
+  isDropDownOpen: boolean = false;
+  isDropDownOpenNotification: boolean = false;
+  isDropDownOpenBlog: boolean = false;
+  public TenEmail = "bang";
+  public Email = "bang-Email";
+
+  constructor(){}
+   
+  openNavProfile(): void{
+    this.isDropDownOpen = !this.isDropDownOpen;
+  }
+  openNavNotification(): void{
+    this.isDropDownOpenNotification= !this.isDropDownOpenNotification;
+  }
+  openNavBlog(): void{
+    this.isDropDownOpenBlog= !this.isDropDownOpenBlog;
+  }
+
 }
 

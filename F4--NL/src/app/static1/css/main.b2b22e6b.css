@@ -219,9 +219,9 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
     margin: 0
 }
 
-input[type=number] {
+/* input[type=number] {
     -moz-appearance: textfield
-}
+} */
 
 @media(min-width: 0px)and (max-width:739px) {
     .tippy-overlay-plugin {
@@ -574,7 +574,8 @@ input[type=number] {
 }
 
 .FormInput_rightBtn__2FZ8H:not(.FormInput_disabled__fCp98) {
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
+    background-image: var(--button-image);
     color: #fff
 }
 
@@ -584,8 +585,9 @@ input[type=number] {
 }
 
 .FormInput_rightBtn__2FZ8H.FormInput_disabled__fCp98 {
-    background-color: #ccc;
-    color: #757575;
+    background-color: var(--button-color);
+    background-image: var(--button-image);
+    color: #fff;
     cursor: not-allowed
 }
 
@@ -683,13 +685,13 @@ input[type=number] {
 
 @media(max-width: 1920px) {
     .Login_wrapper__AaBCA.Login_hasBg__jWrjt:after {
-        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(/static/media/f8_bg_auth_1920.b517075e98f3051de678.png)
+        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/f8_bg_auth_1366.cb1a38f30212c78aa891.png)
     }
 }
 
 @media(max-width: 1366px) {
     .Login_wrapper__AaBCA.Login_hasBg__jWrjt:after {
-        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(/static/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png)
+        background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/f8_bg_auth_1366.cb1a38f30212c78aa891.png)
     }
 }
 
