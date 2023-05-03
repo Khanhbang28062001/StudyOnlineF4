@@ -196,20 +196,6 @@
     }
 }
 
-.Banners_banner__z3Id2 {
-    margin-top: 32px
-}
-
-.Banners_banner__z3Id2 img {
-    border-radius: 8px;
-    max-width: 100%;
-    object-fit: cover;
-    width: 100%
-}
-
-.Banners_banner__z3Id2:hover {
-    opacity: .9
-}
 
 .Banners_googleAds__OwJBK {
     border: 1px solid #e8e8e8;
@@ -235,18 +221,5 @@
         flex-direction:row
     }
 
-    .Banners_banner__z3Id2 {
-        flex: 1 1
-    }
-
-    .Banners_banner__z3Id2+.Banners_banner__z3Id2 {
-        margin-left: 24px
-    }
 }
 
-@media(min-width: 0)and (max-width:739px) {
-    .Banners_banner__z3Id2 {
-        flex:1 1;
-        margin-top: 16px
-    }
-}

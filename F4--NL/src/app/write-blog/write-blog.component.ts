@@ -16,13 +16,15 @@ export class WriteBlogComponent  implements OnInit {
   public TenEmail = "bang";
   public Email = "bang-Email";
 //
-  public contentBlog = "";
-  public title = "";
- 
+  public user_id = 2;
+  public description = "";
+  public content = "";
+
 //
   public formData= this.formBuilder.group({
-    title:['',Validators.required],
-    contentBlog:['',Validators.required],
+    user_id:[2],
+    description:['',Validators.required],
+    content:['',Validators.required],
     // (so truong du lieu trong ban)
   });
 
@@ -33,7 +35,7 @@ export class WriteBlogComponent  implements OnInit {
     ) { }
     public submitBlog(): void {
 
-      // this.common.sendContentblog(this.formData.value);
+      this.common.sendContentblog(this.formData.value);
       this.httpServerService.postSubmitBlog(this.formData.value).subscribe((data)=>{
         console.log('postSubmitBlog', data)
       }
@@ -43,14 +45,9 @@ export class WriteBlogComponent  implements OnInit {
     }
   public ngOnInit( ): void {
     const payload = this.formData.value;
-
-    this.httpServerService.getSubmitBlog().subscribe((data)=>{
-      console.log('getSubmitBlog', data)
-    })
-
-    this.httpServerService.postSubmitBlog(payload).subscribe((data)=>{
-      console.log('postSubmitBlog', data)
-    })
+    // this.httpServerService.postSubmitBlog(payload).subscribe((data)=>{
+    //   console.log('postSubmitBlog', data)
+    // })
     this.httpServerService.getSubmitBlog().subscribe((data)=>{
       console.log('getSubmitBlog', data)
     })
@@ -72,10 +69,5 @@ export class WriteBlogComponent  implements OnInit {
     this.isDropDownOpen = false;
     this.isDropDownOpenNotification= false;
   }
-
   
-
-   
- 
-
 }

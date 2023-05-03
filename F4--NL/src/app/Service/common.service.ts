@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
-  private contentBlog = '';
+  private content = '';
 
   
 
@@ -13,10 +13,10 @@ export class CommonService {
   constructor( ) { }
 
   public getBlog(): any{
-    return this.contentBlog;
+    return this.content;
   }
   public setBlog(content:any): void{
-    this.contentBlog = content;
+    this.content = content;
   }
   public sendContentblog(content:any): void{
     console.log('Da gui len service:', content);

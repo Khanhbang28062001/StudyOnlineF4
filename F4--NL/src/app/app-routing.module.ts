@@ -20,6 +20,8 @@ import { AppComponent } from './app.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
+import { HomepageUserComponent } from './homepage-user/homepage-user.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 const routes: Routes = [
@@ -41,7 +43,9 @@ const routes: Routes = [
   { path: 'write-blog', component: WriteBlogComponent},
   { path: 'home-page-st', component:HomePageStComponent },
   { path: 'homepage-gv', component:HomepageGvComponent },
+  { path: 'homepage-user', component:HomepageUserComponent},
   { path: 'admin', component:AdminComponent},
+  { path: 'blogDetail', component:BlogDetailComponent},
   { path: '**', component: AppComponent},
 
 ];
