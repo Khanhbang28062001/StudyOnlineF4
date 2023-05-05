@@ -4,3 +4,6 @@
     overflow: hidden;
     border-radius: 20px;
 }
+.carousel-item{
+    transition: transform .9s ease-in-out,-webkit-transform .9s ease-in-out;
+}

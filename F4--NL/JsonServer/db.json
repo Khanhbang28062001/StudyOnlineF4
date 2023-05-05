@@ -3,81 +3,7 @@
     {
       "id": 1,
       "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "content": "khanh bang",
-      "id": 11
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 12
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 13
-    },
-    {
-      "content": "khanh bang",
-      "title": "28",
-      "id": 14
-    },
-    {
-      "content": "khanh bang",
-      "title": "28",
-      "id": 15
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 16
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 17
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 18
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 19
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 20
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 21
-    },
-    {
-      "title": "khanh",
-      "contentBlog": "bangxfdgg",
-      "id": 22
-    },
-    {
-      "title": "khanh",
-      "contentBlog": "bangxfdgg",
-      "id": 23
-    },
-    {
-      "title": "kim",
-      "contentBlog": "anh",
-      "id": 24
-    },
-    {
-      "title": "",
-      "contentBlog": "",
-      "id": 25
+      "author": "typicodeeee"
     }
   ],
   "submitBlog": [
@@ -87,8 +13,14 @@
       "postId": "28"
     },
     {
-      "content": "khanh bang",
-      "id": 11
+      "title": "khanh",
+      "contentBlog": "bang",
+      "id": 5
+    },
+    {
+      "title": "sub ne",
+      "contentBlog": "content",
+      "id": 6
     }
   ],
   "profile": [

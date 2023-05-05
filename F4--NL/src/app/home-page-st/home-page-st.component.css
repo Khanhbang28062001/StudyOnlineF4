@@ -5,3 +5,9 @@
     overflow: hidden;
     border-radius: 20px;
 } 
+.fa-solid fa-magnifying-glass {
+    color: #7c7c7c;
+    min-width: 30px;
+    min-height: 17px;
+    margin-top: 8px;
+}

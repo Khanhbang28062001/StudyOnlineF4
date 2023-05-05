@@ -13,6 +13,7 @@
         <div>
           <div class="Search_wrapper__Bwvae d-flex-center" aria-expanded="false">
             <div class="Search_searchIcon__-23JY">
+              <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
             </div>
             <input class="Search_input__GnMba" spellcheck="false" placeholder="Tìm kiếm khóa học, bài viết, video, ..."
               value="">
@@ -24,15 +25,15 @@
         </div>
 
         <div>
-          <div (click)="openNavNotification()" class="NavBar_actionBtn__tzSZd" id="notification-button"
-             ><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
+          <div (click)="openNavNotification()" class="NavBar_actionBtn__tzSZd" id="notification-button"><svg
+              aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell"
               class="svg-inline--fa fa-bell NavBar_action-icon__l9MxX" role="img" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512">
               <path fill="currentColor"
                 d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z">
               </path>
             </svg></div>
-            <!-- aria-expanded="false" -->
+          <!-- aria-expanded="false" -->
           <div *ngIf="isDropDownOpenNotification"
             style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-68.8px, 60.8px);">
             <ul class="Tippy-module_wrapper__1s5m5 Notification_container__ulN0K">
@@ -50,7 +51,7 @@
               class="NavBar_avatar__OG7ib"
               src="https://files.fullstack.edu.vn/f8-prod/user_photos/293030/63e71768e42bd.jpg" alt="Khánh Băng"></div>
         </div>
-        <div *ngIf="isDropDownOpen" 
+        <div *ngIf="isDropDownOpen"
           style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-27.2px, 57.6px);">
           <ul class="Tippy-module_wrapper__1s5m5 UserMenu_wrapper__kevhj hide-on-click">
             <div class="UserMenu_user__GXFLp">
@@ -65,21 +66,26 @@
             </div>
             <hr>
             <ul class="UserMenu_list__FI9-C">
-              <li><a class="UserMenu_item__NXwf1" routerLink="/profile" routerLinkActive="active">Trang cá nhân</a><router-outlet></router-outlet></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/profile" routerLinkActive="active">Trang cá
+                  nhân</a><router-outlet></router-outlet></li>
             </ul>
             <hr>
             <ul class="UserMenu_list__FI9-C">
-              <li><a class="UserMenu_item__NXwf1" routerLink="/write-blog" routerLinkActive="active">Viết blog</a><router-outlet></router-outlet></li>
-              <li><a class="UserMenu_item__NXwf1" routerLink="/posts-drafts" routerLinkActive="active">Bài viết của tôi</a><router-outlet></router-outlet></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/write-blog" routerLinkActive="active">Viết
+                  blog</a><router-outlet></router-outlet></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/posts-drafts" routerLinkActive="active">Bài viết của
+                  tôi</a><router-outlet></router-outlet></li>
             </ul>
             <hr>
             <ul class="UserMenu_list__FI9-C">
-              <li><a class="UserMenu_item__NXwf1" routerLink="/posts-public" routerLinkActive="active">Bài viết đã lưu</a><router-outlet></router-outlet></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/posts-public" routerLinkActive="active">Bài viết đã
+                  lưu</a><router-outlet></router-outlet></li>
             </ul>
             <hr>
             <ul class="UserMenu_list__FI9-C">
-              <li><a class="UserMenu_item__NXwf1" href="/settings/personal">Cài đặt</a></li>
-              <li><a class="UserMenu_item__NXwf1" routerLink="/login-form" routerLinkActive="active" >Đăng xuất</a><router-outlet></router-outlet></li>
+              <li><a class="UserMenu_item__NXwf1" href="/setting-account">Cài đặt</a></li>
+              <li><a class="UserMenu_item__NXwf1" routerLink="/homepage-user" routerLinkActive="active">Đăng
+                  xuất</a><router-outlet></router-outlet></li>
             </ul>
           </ul>
         </div>
@@ -107,9 +113,9 @@
               <ul
                 class="Tippy-module_wrapper__1s5m5 Tippy-module_options__37VQJ CreateButton_menu__YI0Ly Tippy-module_hasLink__8U2Xq"
                 style="min-width: 200px;">
-                <li><a routerLink="/write-blog" routerLinkActive="active"><em><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen"
-                        class="svg-inline--fa fa-pen " role="img" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512">
+                <li><a routerLink="/write-blog" routerLinkActive="active"><em><svg aria-hidden="true" focusable="false"
+                        data-prefix="fas" data-icon="pen" class="svg-inline--fa fa-pen " role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor"
                           d="M362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32zM421.7 220.3L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3z">
                         </path>
@@ -150,7 +156,7 @@
 
             <!-- The slideshow -->
             <div class="carousel-inner"
-              style="background-image: linear-gradient(to right, rgba(74, 0, 143, 0.845), rgb(255, 186, 164))">
+              style="background-image: linear-gradient(to right, rgba(74, 0, 143, 0.845), rgb(40 182 249 / 92%))">
               <div class="carousel-item active">
                 <img src="https://files.fullstack.edu.vn/f8-prod/banners/Banner_01_2.png" alt="Thành quả của học viên"
                   title="Thành Quả của Học Viên">
@@ -674,8 +680,7 @@
         <div class="Footer_column__Jllii">
           <div>
             <div class="Footer_column-top__2kQ8J"><a href="/"><img class="Footer_top-logo__2i6Rn"
-                  src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
-                  alt="F4"></a>
+                  src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png" alt="F4"></a>
               <h2 class="Footer_top-slogan__yvaAt">Học Lập Trình Để Đi Làm</h2>
             </div>
             <!-- <p class="Footer_contact-list__UCS+O">Điện thoại: <a href="tel:0246.329.1102">0898.0257.04</a><br>Email:
@@ -686,8 +691,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
+      <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
         <div class="Footer_column__Jllii">
           <div>
             <h2 class="Footer_heading__JLn-b">Về F4</h2>
@@ -700,8 +704,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
+      <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-4__30Uoi index-module_l-2__2TSUm">
         <div class="Footer_column__Jllii">
           <div>
             <h2 class="Footer_heading__JLn-b">Công cụ</h2>
@@ -717,8 +720,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-3__MjWvb">
+      <section class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-6__30cxf index-module_l-3__MjWvb">
         <div class="Footer_column__Jllii">
           <div>
             <!-- <h2 class="Footer_heading__JLn-b"><a target="_blank"

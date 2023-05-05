@@ -834,7 +834,7 @@ svg:not(:host).svg-inline--fa {
 
 :root {
     
-    --primary-color: #3823f0;
+    --primary-color: #1473e6;
     --black-color: #000;
     --white-color: #fff;
     --gray-color: #666;
@@ -2565,4 +2565,7 @@ textarea.NewPost_wrapper__QUJ12.ng-untouched.ng-pristine.ng-valid {
     overflow-y: scroll;
     resize: none;
     width: 100%;
+}
+div#navbar-actions-portal {
+    margin-right: 50px;
 }

@@ -27,6 +27,7 @@ import { WriteBlogComponent } from './write-blog/write-blog.component';
 import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
 import { HomepageUserComponent } from './homepage-user/homepage-user.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { HomepageUserComponent } from './homepage-user/homepage-user.component';
     HomePageStComponent,
     HomepageGvComponent,
     HomepageUserComponent,
+    BlogDetailComponent,
     
   
   ],
