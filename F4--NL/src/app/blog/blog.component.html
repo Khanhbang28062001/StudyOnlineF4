@@ -142,22 +142,20 @@
               <section class="index-module_row__-AHgh">
                 <section
                   class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-8__yebHm">
-                  <div class="Blog_leftLayout__Kuc0z">
+                  <div class="Blog_leftLayout__Kuc0z" *ngFor="let blog of blogs">
                     <div>
                       <div class="PostItem_wrapper__5s6Lk">
                         <div class="PostItem_header__kJhep">
                           <div class="PostItem_author__-CiNM">
-                            <a routerLink="/blogDetail" routerLinkActive="active">
+                            <a routerLink="/blog" routerLinkActive="active">
                               <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
                                 style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/36050/628a1334d274d.jpg"
-                                  alt="Nguyễn Thanh Hòa" />
-                                <img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
+                                <img src="{{blog.imageurlBlog}}" alt="Đặng Thị Khánh Băng" />
                               </div>
                             </a><router-outlet></router-outlet>
-                            <a href="/@nguyen-thanh-hoa-1">
-                              <span>Nguyễn Thanh Hòa</span>
+
+                            <a href="{{blog.imageurlBlog}}">
+                              <span>Đặng Thị Khánh Băng {{blog.id}}</span>
                               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check"
                                 class="svg-inline--fa fa-circle-check UserName_icon__zT+rB" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 1rem">
@@ -190,637 +188,81 @@
                         </div>
                         <div class="PostItem_body__Fnfo-">
                           <div class="PostItem_info__DZr39">
-                            <a href="/blog/can-chinh-moi-phan-tu-voi-thuoc-tinh-position.html">
+                            <a [routerLink]="['/blog', +blog.id]" >
                               <h2 class="PostItem_title__8lSHm">
-                                Căn chỉnh mọi phần tử với thuộc tính position?
+                                {{blog.descriptionBlog}}
                               </h2>
-                            </a>
+                            </a><router-outlet></router-outlet>
                             <p class="PostItem_desc__be9G8">
-                              Phần 3 Căn chỉnh phần tử (position) với hàm
-                              translate(); Phần 4 Căn chỉnh phần tử (position)
-                              với margin auto?
+                              {{blog.contentBlog}}
                             </p>
                             <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/html-css?page=1">HTML-CSS</a>
-                              <span>một tháng trước</span>
+                              <span>{{blog.timeCreateBlog}}</span>
                               <span class="PostItem_dot__ZYdFt">·</span>2 phút
                               đọc
                             </div>
                           </div>
                           <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/can-chinh-moi-phan-tu-voi-thuoc-tinh-position.html">
-                              <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6428/63e7a0cae97c9.png"
-                                alt="Căn chỉnh mọi phần tử với thuộc tính position?" /></a>
+                            <img src="{{blog.imageurlBlog}}" />
                           </div>
                         </div>
                       </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@phamhuyen3">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/256991/63b63dc6657a1.jpg"
-                                  alt="Vịt Vịt" />
-                                <img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a>
-                            <a href="/@phamhuyen3">
-                              <span>Vịt Vịt</span>
-                            </a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="Pagination_wrapper__Rvhto">
+                      <div class="Pagination_pages__FFgjW">
+                        <div class="Pagination_page__fm3g4 Pagination_btn-pre__Pm0Wu">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-left"
+                            class="svg-inline--fa fa-angles-left Pagination_icon__rsM4G" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                              d="M77.25 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C175.6 444.9 183.8 448 192 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L77.25 256zM269.3 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C367.6 444.9 375.8 448 384 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L269.3 256z">
+                            </path>
+                          </svg>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/chuyen-nghe-sang-lap-trinh-co-kho-khan-nhu-nhieu-nguoi-nghi.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Chuyển nghề sang lập trình có khó khăn như nhiều
-                                người nghĩ?&nbsp;
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Trong thời đại số hiện nay, thế giới trở nên
-                              “phẳng” hơn và cơ hội cũng mở ra nhiều hơn với tất
-                              cả mọi người. Người ta có thể thay...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/front-end?page=1">Front-end</a>
-                              <span>một tháng trước</span>
-                              <span class="PostItem_dot__ZYdFt">·</span>6 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/chuyen-nghe-sang-lap-trinh-co-kho-khan-nhu-nhieu-nguoi-nghi.html">
-                              <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6410/63e5fdde81a1b.jpg"
-                                alt="Chuyển nghề sang lập trình có khó khăn như nhiều người nghĩ?" /></a>
-                          </div>
+                        <div class="Pagination_page__fm3g4">
+                          <span style="margin: 0px auto">1</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@hieu-hoang-14">
-                              <div class="FallbackAvatar_avatar__gmj3S" style="--font-size: 2.9px">
-                                <img src="/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg"
-                                  alt="Hoàng Ngọc Hiếu" />
-                              </div>
-                            </a>
-                            <a href="/@hieu-hoang-14">
-                              <span>Hoàng Ngọc Hiếu</span>
-                            </a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_active__q3h4d">
+                          <span style="margin: 0px auto">2</span>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/share-mot-so-cach-tim-viec-internfresher-hieu-qua.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                [Share] Một số cách tìm việc Intern/Fresher hiệu
-                                quả
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Chào các bạn, đầu xuân năm mới kính chúc các bác
-                              quý cô chú anh chị một năm mới thành công, an
-                              khang thịnh vượng. Đầu xuân năm mới...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/reactjs?page=1">ReactJS</a>
-                              <span>một tháng trước</span>
-                              <span class="PostItem_dot__ZYdFt">·</span>3 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/share-mot-so-cach-tim-viec-internfresher-hieu-qua.html">
-                              <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6384/63e45f8ad0976.png"
-                                alt="[Share] Một số cách tìm việc Intern/Fresher hiệu quả" /></a>
-                          </div>
+                        <div class="Pagination_page__fm3g4">
+                          <span style="margin: 0px auto">3</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@phamhuyen3">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/256991/63b63dc6657a1.jpg"
-                                  alt="Vịt Vịt" />
-                                <img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a>
-                            <a href="/@phamhuyen3">
-                              <span>Vịt Vịt</span>
-                            </a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4">
+                          <span style="margin: 0px auto">4</span>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/tu-hoc-lap-trinh-co-kho-khong-5-tips-de-tu-hoc-tot-hon.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Tự học lập trình có khó không? 5 tips để tự học
-                                tốt hơn
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Lập trình đang dần trở thành một ngành “hot” và là
-                              xu thế của nhiều người trẻ hiện nay. Vậy tự học
-                              lập trình có khó không? Bài viết...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/front-end?page=1">Front-end</a>
-                              <span>một tháng trước</span>
-                              <span class="PostItem_dot__ZYdFt">·</span>7 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/tu-hoc-lap-trinh-co-kho-khong-5-tips-de-tu-hoc-tot-hon.html">
-                              <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6352/63e1f988bfcdf.jpg"
-                                alt="Tự học lập trình có khó không? 5 tips để tự học tốt hơn" /></a>
-                          </div>
+                        <div class="Pagination_page__fm3g4">
+                          <span style="margin: 0px auto">5</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@phamhuyen3">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/256991/63b63dc6657a1.jpg"
-                                  alt="Vịt Vịt" />
-                                <img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a>
-                            <a href="/@phamhuyen3">
-                              <span>Vịt Vịt</span>
-                            </a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4">
+                          <span style="margin: 0px auto">6</span>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/lap-trinh-la-gi-nghe-lap-trinh-co-that-la-luong-ngan-do.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Lập trình là gì? Nghề lập trình có thật là lương
-                                “ngàn đô”?&nbsp;
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Nghề lập trình đang là một từ khóa vô cùng hot và
-                              có mật độ tìm kiếm rất lớn. Nhưng thực sự lập
-                              trình là gì và đây có phải là một...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/front-end?page=1">Front-end</a><span>một
-                                tháng trước</span><span class="PostItem_dot__ZYdFt">·</span>6 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/lap-trinh-la-gi-nghe-lap-trinh-co-that-la-luong-ngan-do.html"><img
-                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6294/63da2870cd0db.jpg"
-                                alt="Lập trình là gì? Nghề lập trình có thật là lương “ngàn đô”?" /></a>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
+                          <span style="margin: 0px auto">7</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@nguyen-thanh-hoa-1">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/36050/628a1334d274d.jpg"
-                                  alt="Nguyễn Thanh Hòa" /><img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a><a href="/@nguyen-thanh-hoa-1"><span>Nguyễn Thanh Hòa</span><svg aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="circle-check"
-                                class="svg-inline--fa fa-circle-check UserName_icon__zT+rB" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 1rem">
-                                <path fill="currentColor"
-                                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z">
-                                </path>
-                              </svg></a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
+                          <span style="margin: 0px auto">8</span>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/thuc-hanh-flexbox.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Thực hành Flexbox!
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Mình bảo đảm khi đọc hết bài này: Chỉ cần nhớ ba
-                              dòng, chắc chắn bạn thông thạo Flexbox!
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <span>2 tháng trước</span><span class="PostItem_dot__ZYdFt">·</span>7 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/thuc-hanh-flexbox.html"><img
-                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6222/63d133be85bcc.png"
-                                alt="Thực hành Flexbox!" /></a>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
+                          <span style="margin: 0px auto">9</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@minhtrinh1">
-                              <div class="FallbackAvatar_avatar__gmj3S" style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/173498/63c27eec94541.png"
-                                  alt="Minh Trịnh" />
-                              </div>
-                            </a><a href="/@minhtrinh1"><span>Minh Trịnh</span></a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
+                          <span style="margin: 0px auto">10</span>
                         </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a
-                              href="/blog/using-ckeditor-5-in-reactjs-include-upload-images-and-many-cool-functionalities.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Using CKEditor 5 in ReactJS (include upload
-                                images and many cool functionalities)
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Hi there, in this article I will guide you guys on
-                              how to use CKEditor v5 in React project (you can
-                              also use this in the...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/javascript?page=1">Javascript</a><span>2
-                                tháng trước</span><span class="PostItem_dot__ZYdFt">·</span>2 phút
-                              đọc
-                            </div>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
+                          <span style="margin: 0px auto">11</span>
                         </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@nguyen-thanh-hoa-1">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/36050/628a1334d274d.jpg"
-                                  alt="Nguyễn Thanh Hòa" /><img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a><a href="/@nguyen-thanh-hoa-1"><span>Nguyễn Thanh Hòa</span><svg aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="circle-check"
-                                class="svg-inline--fa fa-circle-check UserName_icon__zT+rB" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 1rem">
-                                <path fill="currentColor"
-                                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z">
-                                </path>
-                              </svg></a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a
-                              href="/blog/bo-tui-21-lenh-git-co-ban-cach-nho-giup-newdev-lam-chu-git-quan-ly-tot-ma-ngu.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Bỏ túi 21 lệnh Git cơ bản + Cách nhớ, giúp
-                                newDev làm chủ Git quản lý tốt mã nguồn!
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              touch “tên file” (Tạo 1 file) echo “nội dung” &gt;
-                              “tên file” (viết nội dung vào trong file) git
-                              remote add origin git@github.com:&lt;tên repo&gt;
-                              (Tạo kết&nbsp;
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <span>3 tháng trước</span><span class="PostItem_dot__ZYdFt">·</span>14 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a
-                              href="/blog/bo-tui-21-lenh-git-co-ban-cach-nho-giup-newdev-lam-chu-git-quan-ly-tot-ma-ngu.html">
-                              <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/5920/63a5a5ec0453c.png"
-                                alt="Bỏ túi 21 lệnh Git cơ bản + Cách nhớ, giúp newDev làm chủ Git quản lý tốt mã nguồn!" /></a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@cuongtran11">
-                              <div class="FallbackAvatar_avatar__gmj3S" style="--font-size: 2.9px">
-                                <img src="/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg" alt="Cường Trần" />
-                              </div>
-                            </a><a href="/@cuongtran11"><span>Cường Trần</span></a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/ban-da-biet-cach-dua-trang-web-cua-minh-len-github.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Bạn đã biết cách đưa trang web của mình lên
-                                github
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Chắc hẳn nhiều bạn sau khi đã thành công tạo một
-                              website từ những kiến thức học được từ khóa học
-                              lập trình tại F4 và cảm thấy đó...
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/github?page=1">Github</a><span>3 tháng
-                                trước</span><span class="PostItem_dot__ZYdFt">·</span>3 phút
-                              đọc
-                            </div>
-                          </div>
-                          <div class="PostItem_thumb__m4iXl">
-                            <a href="/blog/ban-da-biet-cach-dua-trang-web-cua-minh-len-github.html"><img
-                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/5918/63a4b3ff73341.jpg"
-                                alt="Bạn đã biết cách đưa trang web của mình lên github" /></a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="PostItem_wrapper__5s6Lk">
-                        <div class="PostItem_header__kJhep">
-                          <div class="PostItem_author__-CiNM">
-                            <a href="/@nguyen-thanh-hoa-1">
-                              <div class="FallbackAvatar_avatar__gmj3S FallbackAvatar_pro__-8mK+"
-                                style="--font-size: 2.9px">
-                                <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/36050/628a1334d274d.jpg"
-                                  alt="Nguyễn Thanh Hòa" /><img class="FallbackAvatar_crown__BnONf"
-                                  src="/static/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown" />
-                              </div>
-                            </a><a href="/@nguyen-thanh-hoa-1"><span>Nguyễn Thanh Hòa</span><svg aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="circle-check"
-                                class="svg-inline--fa fa-circle-check UserName_icon__zT+rB" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 1rem">
-                                <path fill="currentColor"
-                                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z">
-                                </path>
-                              </svg></a>
-                          </div>
-                          <div class="PostItem_actions__eWV5m">
-                            <div class="Bookmark_toggleBtn__sSS-2 PostItem_optionBtn__h8ALw">
-                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bookmark"
-                                class="svg-inline--fa fa-bookmark" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512">
-                                <path fill="currentColor"
-                                  d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z">
-                                </path>
-                              </svg>
-                            </div>
-                            <div class="PostItem_optionBtn__h8ALw" aria-expanded="false">
-                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                class="svg-inline--fa fa-ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                  d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="PostItem_body__Fnfo-">
-                          <div class="PostItem_info__DZr39">
-                            <a href="/blog/lam-the-nao-de-copy-css-selector-mot-cach-nhanh-nhat.html">
-                              <h2 class="PostItem_title__8lSHm">
-                                Làm thế nào để Copy CSS selector một cách nhanh
-                                nhất?
-                              </h2>
-                            </a>
-                            <p class="PostItem_desc__be9G8">
-                              Extension chặn đứng Sử dụng sai `CSS selector`. Nó
-                              cho phép bạn copy tất cả hoặc một phần (bạn lựa
-                              chọn) tên `id`, tên `class` từ `file HTML` sang
-                              `file CSS`
-                            </p>
-                            <div class="PostItem_info__DZr39">
-                              <a class="PostItem_tags__0M1lV" href="/blog/tag/front-end?page=1">Front-end</a><span>3
-                                tháng trước</span><span class="PostItem_dot__ZYdFt">·</span>10 phút
-                              đọc
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="Pagination_wrapper__Rvhto">
-                        <div class="Pagination_pages__FFgjW">
-                          <div class="Pagination_page__fm3g4 Pagination_btn-pre__Pm0Wu">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-left"
-                              class="svg-inline--fa fa-angles-left Pagination_icon__rsM4G" role="img"
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                              <path fill="currentColor"
-                                d="M77.25 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C175.6 444.9 183.8 448 192 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L77.25 256zM269.3 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C367.6 444.9 375.8 448 384 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L269.3 256z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div class="Pagination_page__fm3g4">
-                            <span style="margin: 0px auto">1</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_active__q3h4d">
-                            <span style="margin: 0px auto">2</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4">
-                            <span style="margin: 0px auto">3</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4">
-                            <span style="margin: 0px auto">4</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4">
-                            <span style="margin: 0px auto">5</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4">
-                            <span style="margin: 0px auto">6</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
-                            <span style="margin: 0px auto">7</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
-                            <span style="margin: 0px auto">8</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
-                            <span style="margin: 0px auto">9</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
-                            <span style="margin: 0px auto">10</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_hidden__Obbio">
-                            <span style="margin: 0px auto">11</span>
-                          </div>
-                          <div class="Pagination_page__fm3g4 Pagination_btn-next__TNt+b">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right"
-                              class="svg-inline--fa fa-angles-right Pagination_icon__rsM4G" role="img"
-                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                              <path fill="currentColor"
-                                d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z">
-                              </path>
-                            </svg>
-                          </div>
+                        <div class="Pagination_page__fm3g4 Pagination_btn-next__TNt+b">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right"
+                            class="svg-inline--fa fa-angles-right Pagination_icon__rsM4G" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z">
+                            </path>
+                          </svg>
+
                         </div>
                       </div>
                     </div>
@@ -844,7 +286,7 @@
                     </ul>
                   </div>
                   <div class="Banners_wrapper__8fjJA Banners_sticky__7wV6o" style="--sticky: 80px; --align: flex-start">
-                 
+
                   </div>
                 </section>
               </section>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="google-site-verification" content="SIQIFfmR8hhzmuoTX27TN_uf9rd425mDs_TNWTTiISk">
-        <title>Đăng nhập vào F4</title>
-        <link href="login-form.component.css" rel="stylesheet">
-    
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="SIQIFfmR8hhzmuoTX27TN_uf9rd425mDs_TNWTTiISk">
+    <title>Đăng nhập vào F4</title>
+    <link href="login-form.component.css" rel="stylesheet">
+
+</head>
+
 <body>
     <div id="root">
         <div class="Login_wrapper__AaBCA Login_hasBg__jWrjt">
@@ -20,53 +22,47 @@
                             </path>
                         </svg></div>
                     <div class="Login_header__2VlZX"><a href="https://fullstack.edu.vn/"><img class="Login_logo__OAmX6"
-                                src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png" alt="F8"></a>
+                                src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Logo/Logo_F4.png"
+                                alt="F8"></a>
                         <h1 class="Login_title__ONT4I">Đăng nhập vào F4</h1>
                     </div>
-                    <div class="Login_body__t6Xgp">
-                        <div class="Login_formBody__kXy82">
-                            <div class="FormControl_wrapper__WJGST">
-                                <div class="FormInput_wrapper__agiKS">
-                                    <div class="FormInput_labelGroup__pDJ+V"><label class="FormInput_label__kIc-w">Số
-                                            điện thoại</label></div>
-                                    <div class="FormInput_inputWrap__mjtRx">
-                                        <div class="FormSelect_wrapper__glPyO FormSelect_insideInput__zG6A1">
-                                            <div class="FormSelect_label__Xkoy1" aria-expanded="false"><span>VN
-                                                    +84</span><svg aria-hidden="true" focusable="false"
-                                                    data-prefix="fas" data-icon="chevron-down"
-                                                    class="svg-inline--fa fa-chevron-down fa-w-14 FormSelect_icon__SVzyW"
-                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                                    <path fill="currentColor"
-                                                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                                    </path>
-                                                </svg></div>
-                                        </div><input [(ngModel)]="numberPhone" type="number" placeholder="Số điện thoại" name="phone" maxlength="12"
-                                            value="">
+                    <form autocomplete="off" #formGroup="ngForm" [formGroup]="formDataLogin"  (ngSubmit)="onSubmit(formGroup.value)">
+                        <div class="Login_body__t6Xgp">
+                            <div class="Login_formBody__kXy82">
+                                <div class="FormControl_wrapper__WJGST">
+                                    <div class="FormInput_wrapper__agiKS">
+                                        <div class="FormInput_labelGroup__pDJ+V"><label
+                                                class="FormInput_label__kIc-w">Tên
+                                                tài khoản</label></div>
+                                        <div class="FormInput_inputWrap__mjtRx">
+                                            <input formControlName="username" [(ngModel)]="username"
+                                                placeholder="Nhập tên tài khoản" name="display_name" maxlength="50"
+                                                value="">
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="FormControl_wrapper__WJGST">
+                                    <div class="FormInput_wrapper__agiKS">
+                                        <div class="FormInput_inputWrap__mjtRx">
+                                            <input formControlName="password" [(ngModel)]="password"
+                                                placeholder="Nhập mật khẩu" name="display_name" maxlength="50" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="ranks-module_primary__3Sh2z base-module_button__2kgqC sizes-module_m__2XF5n Login_submitBtn__h5Ikm tooltip-module_tooltip__3Q4cn"
+                                     type="submit"  >
+                                     <!-- [disabled]="formDataLogin.value" --> 
+                                    <div class="base-module_inner__182n1 sizes-module_inner__3Ua2h">
+                                        <span class="base-module_text__1MM8s">Đăng nhập</span>
+                                    </div>
+                                </button>
                             </div>
-                            <div class="FormControl_wrapper__WJGST">
-                                <div class="FormInput_wrapper__agiKS">
-                                    <div class="FormInput_labelGroup__pDJ+V"></div>
-                                    <div class="FormInput_inputWrap__mjtRx"><input type="number" [(ngModel)]="passCode"  name="phone_code"
-                                            placeholder="Nhập mã xác nhận"  maxlength="6" value="">
-                                            
-                                        <div class="FormInput_rightBtn__2FZ8H"  (click)="inputPassCode()" ><span>Gửi
-                                                mã</span></div>
-                                    </div>
-                                </div>
-                            </div><button
-                                class="ranks-module_primary__3Sh2z base-module_button__2kgqC sizes-module_m__2XF5n Login_submitBtn__h5Ikm tooltip-module_tooltip__3Q4cn"
-                                (click)="inputNumberPhone()" type="button">
-                                <div class="base-module_inner__182n1 sizes-module_inner__3Ua2h"><span
-                                        class="base-module_text__1MM8s">Đăng nhập</span></div>
-                            </button>
+                            <p class="Login_dontHaveAcc__l0kxL">Bạn chưa có tài khoản? <a routerLink="/signup-form"
+                                    routerLinkActive="active">Đăng ký</a> <router-outlet></router-outlet> </p>
                         </div>
-                        <p class="Login_dontHaveAcc__l0kxL">Bạn chưa có tài khoản? <a
-                                routerLink="/signup-form" routerLinkActive="active">Đăng
-                                ký</a> <router-outlet></router-outlet> </p>
-                    </div>
-                    <div class="Login_acceptTerm__y3Imp">Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý
+                    </form>
+                    <div class="Login_acceptTerm__y3Imp">Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng
+                        ý
                         với <a href="https://fullstack.edu.vn/terms">Điều khoản sử dụng</a> của chúng tôi.</div>
                 </div>
                 <div class="Login_about__4AA3m"><a href="https://fullstack.edu.vn/about-us" target="_blank"
@@ -89,20 +85,6 @@
                         style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
                 </div><iframe style="display: none;"></iframe>
             </div>
-        </div>
-    </div>
-    <div
-        style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0;">
-        <div
-            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;">
-        </div>
-        <div
-            style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: absolute; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255); overflow: hidden;">
-            <iframe title="hình ảnh xác thực reCAPTCHA sẽ hết hạn sau 2 phút nữa"
-                src="https://www.google.com/recaptcha/api2/bframe?hl=vi&amp;v=NZrMWHVy58-S9gVvad9HVGxk&amp;k=6LcMZR0UAAAAALgPMcgHwga7gY5p8QMg1Hj-bmUv"
-                name="c-aqnk4jvm5rzb" frameborder="0" scrolling="no"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                style="width: 100%; height: 100%;"></iframe>
         </div>
     </div>
 </body>

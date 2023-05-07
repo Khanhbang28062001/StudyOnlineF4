@@ -12,13 +12,13 @@ export class CommonService {
 
   constructor( ) { }
 
-  public getBlog(): any{
+  public getData(): any{
     return this.content;
   }
-  public setBlog(content:any): void{
+  public setData(content:any): void{
     this.content = content;
   }
-  public sendContentblog(content:any): void{
+  public sendData(content:any): void{
     console.log('Da gui len service:', content);
   }
 
