@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CommonService } from '../Service/common.service';
@@ -11,6 +12,7 @@ import { UserService } from '../Service/user.service';
 export class LoginFormComponent {
   public username = "";
   public password ="";
+  public routeroutlet ="";
   // public sendPassCode ="send";
   // public pass = "";
   
@@ -22,18 +24,29 @@ export class LoginFormComponent {
   constructor (private common: CommonService,
     private formBuilder: FormBuilder,
     private userService:UserService,
+    private router : Router
    ){
 
    }
 
   ngOnInit(): void{}
   
-  onSubmit( formData:FormBuilder ){
+  onSubmit( formData:FormBuilder
+             ){
 
      console.log("send user",this.formDataLogin.value);
      if (this.formDataLogin.value.username && this.formDataLogin.value.password) {
       this.userService.CheckLogin(this.formDataLogin.value).subscribe((data) => {
         console.log('access successful', data)
+        if (data.idrole == 1){
+          this.router.navigate(['/home-page-st']);
+        }
+        if (data.idrole == 2){
+          this.router.navigate(['/homepage-gv']);
+        }
+        if (data.idrole == 3){
+          this.routeroutlet = "";
+        }
       }
       );
     }

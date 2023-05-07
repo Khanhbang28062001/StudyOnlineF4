@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage-user',
@@ -13,8 +14,14 @@ export class HomepageUserComponent {
   public TenEmail = "bang";
   public Email = "bang-Email";
 
-  constructor(){}
+  constructor(private router:Router){}
    
+  public Login(){
+    this.router.navigate(['/login-form']);
+  }
+  public signup(){
+    this.router.navigate(['/signup-form']);
+  }
   openNavProfile(): void{
     this.isDropDownOpen = !this.isDropDownOpen;
     this.isDropDownOpenNotification= false;

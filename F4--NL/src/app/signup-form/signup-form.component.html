@@ -34,7 +34,7 @@
                                         <div class="FormInput_labelGroup__pDJ+V"><label
                                                 class="FormInput_label__kIc-w">Tên tài khoản</label></div>
                                         <div class="FormInput_inputWrap__mjtRx">
-                                            <input formControlName="userName" [(ngModel)]="userName"
+                                            <input formControlName="username" [(ngModel)]="userName"
                                                 placeholder="Tên tài khoản của bạn(Tối đa 50 ký tự)" name="display_name" maxlength="50"
                                                 value="">
                                         </div>
@@ -57,13 +57,13 @@
                                         <div class="FormInput_labelGroup__pDJ+V"><label
                                                 class="FormInput_label__kIc-w">Mật khẩu</label></div>
                                         <div class="FormInput_inputWrap__mjtRx">
-                                            <input formControlName="passWord" [(ngModel)]="passWord"
+                                            <input formControlName="password" [(ngModel)]="passWord"
                                                 placeholder="Nhập mật khẩu (Tối thiểu 6 ký tự)" name="display_name" maxlength="50" value="">
                                         </div>
                                       
                                     </div>
                                 </div>
-                                <div *ngIf="formData.valid " class="alert alert-danger">Thông tin hợp lệ!</div>
+                                <!-- <div *ngIf="formData.valid " class="alert alert-danger">Thông tin hợp lệ!</div> -->
                                 <div *ngIf="!formData.valid "#errorMessages class="error-messages"> {{errorMessage}}</div>
                                 <button
                                     class="ranks-module_primary__3Sh2z base-module_button__2kgqC sizes-module_m__2XF5n Login_submitBtn__h5Ikm tooltip-module_tooltip__3Q4cn"
