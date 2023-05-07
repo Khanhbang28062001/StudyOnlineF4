@@ -28,6 +28,9 @@ import { HomePageStComponent } from './home-page-st/home-page-st.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
 import { HomepageUserComponent } from './homepage-user/homepage-user.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { GetBlogService } from './Service/get-blog.service';
+import { UserModule } from './model/user.module';
+
 
 
 @NgModule({
@@ -54,6 +57,7 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
     HomepageGvComponent,
     HomepageUserComponent,
     BlogDetailComponent,
+
     
   
   ],
@@ -62,10 +66,15 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+  
+    
+
     
   ],
-  providers: [],
+  providers: [GetBlogService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

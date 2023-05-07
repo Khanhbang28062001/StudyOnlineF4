@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'homepage-gv', component:HomepageGvComponent },
   { path: 'homepage-user', component:HomepageUserComponent},
   { path: 'admin', component:AdminComponent},
-  { path: 'blogDetail', component:BlogDetailComponent},
+  { path: 'blog/:id', component:BlogDetailComponent},
   { path: '**', component: AppComponent},
 
 ];
