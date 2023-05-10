@@ -67,7 +67,7 @@ export class WriteBlogComponent implements OnInit {
     this.userIdService.currentUserId.subscribe(userId => this.userId = userId);
     this.userService.getUserById(this.userId).subscribe((data) => {
       this.User = data;
-      console.log("Lay du lieu user blog roi ne!!!!!! " + this.User.idrole);
+      console.log("Lay du lieu user roi ne!!!!!! " + this.User.idrole);
     })
   }
 

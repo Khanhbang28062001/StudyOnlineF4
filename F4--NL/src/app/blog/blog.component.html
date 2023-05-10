@@ -112,13 +112,29 @@
             </div>
           </div>
           <ul class="Sidebar_list__HnCzM">
-            <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 " routerLink="/home-page-st"
-                routerLinkActive="active"><i
-                  class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet></li>
+            <div *ngIf="User.idrole == 0">
+              <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 " routerLink="/homepage-user"
+                  routerLinkActive="active"><i
+                    class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet>
+              </li>
+            </div>
+            <div *ngIf="User.idrole == 1">
+              <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 " routerLink="/home-page-st"
+                  routerLinkActive="active"><i
+                    class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet>
+              </li>
+            </div>
+            <div *ngIf="User.idrole == 2">
+              <li><a aria-current="page" class="Sidebar_itemBtn__Q78b7 " routerLink="/homepage-gv"
+                  routerLinkActive="active"><i
+                    class="fa-solid fa-house"></i><span>Home</span></a><router-outlet></router-outlet>
+              </li>
+            </div>
+            
             <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/study-route" routerLinkActive="active"><i
                   class="fa-solid fa-road"></i><span>Lộ trình</span></a><router-outlet></router-outlet>
             </li>
-            <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/home-page-st" routerLinkActive="active"><i
+            <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/study" routerLinkActive="active"><i
                   class="fa-solid fa-lightbulb"></i><span>Học</span></a><router-outlet></router-outlet>
             </li>
             <li><a class="Sidebar_itemBtn__Q78b7 Sidebar_active__uvck8" routerLink="/blog" routerLinkActive="active"><i
