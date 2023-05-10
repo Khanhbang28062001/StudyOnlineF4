@@ -26,6 +26,7 @@ import { StudyComponent } from './study/study.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomepageUserComponent},
   { path: 'add-course', component: AddCourseComponent },
   { path: 'bookmark', component: BookmarkComponent },
   { path: 'blog', component: BlogComponent },
