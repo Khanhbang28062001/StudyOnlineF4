@@ -62,7 +62,7 @@
         <div class="NavBar_avatar-wrapper__j7jMj" aria-expanded="false">
           <div (click)="openNavProfile()" class="FallbackAvatar_avatar__gmj3S" style="--font-size:3.2px;"><img
               class="NavBar_avatar__OG7ib"
-              src="https://files.fullstack.edu.vn/f8-prod/user_photos/293030/63e71768e42bd.jpg" alt="Khánh Băng"></div>
+              src="{{User.imguser}}" alt="User"></div>
         </div>
         <div *ngIf="isDropDownOpen"
           style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-27.2px, 57.6px);">
@@ -70,11 +70,11 @@
             <div class="UserMenu_user__GXFLp">
               <div class="UserMenu_avatarWrapper__9ABYL">
                 <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:5.6px;"><img
-                    src="https://files.fullstack.edu.vn/f8-prod/user_photos/289130/63da5c8beb71a.jpg"
-                    alt="{{TenEmail}}"></div>
+                    src="{{User.imguser}}"
+                    alt="{{User.username}}"></div>
               </div>
-              <div class="UserMenu_info__UqeZT"><span class="UserMenu_name__L18s-">{{ TenEmail }}</span>
-                <div class="UserMenu_username__7qkRU">{{ Email }}</div>
+              <div class="UserMenu_info__UqeZT"><span class="UserMenu_name__L18s-">{{ User.username }}</span>
+                <div class="UserMenu_username__7qkRU">{{ User.email }}</div>
               </div>
             </div>
             <hr>
@@ -150,13 +150,11 @@
             <div class="Profile_user__iDkf1">
               <div class="Profile_user-avatar__y8fSV">
                 <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:17.2px;">
-                  <img class="avatar"
-                    src="https://my-web-study-onl-project.s3.ap-southeast-1.amazonaws.com/Media/fallback-avatar.155cdb2376c5d99ea151.jpg"
-                    alt="I hate you So much">
+                  <img class="avatar" src="{{ User.imguser }}" alt="avatar">
                 </div>
               </div>
               <div class="Profile_user-name__xIJlY">
-                <span>I hate you So much</span>
+                <span>{{ User.username }}</span>
               </div>
             </div>
             <div class="FallbackBackground_btn-change-cover__NNmPv">
@@ -205,71 +203,7 @@
               </section>
               <section
                 class="index-module_col__2EQm9 index-module_c-12__u7UXF index-module_m-12__2CxUL index-module_l-7__kRbS-">
-                <div class="Box_wrapper__uAKHJ">
-                  <h4 class="Box_title__kFB9-">Các khóa học đã tham gia</h4>
-                  <div>
-                    <div class="Profile_inner__EK7zA"><a class="Profile_thumb__dY3wD" href="/courses/nodejs"><img
-                          src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" class="Profile_thumb-image__vz1Iq"
-                          alt="Node &amp; ExpressJS"></a>
-                      <div class="info">
-                        <h3 class="Profile_info-title__nwecV"><a href="/courses/nodejs">Node
-                            &amp; ExpressJS</a></h3>
-                        <p class="Profile_info-desc__JTJYr">Học Back-end với Node &amp;
-                          ExpressJS framework, hiểu các khái niệm khi làm Back-end và xây dựng
-                          RESTful API cho trang web.</p>
-                      </div>
-                    </div>
-                    <div class="Profile_inner__EK7zA"><a class="Profile_thumb__dY3wD" href="/courses/reactjs"><img
-                          src="https://files.fullstack.edu.vn/f8-prod/courses/13/13.png"
-                          class="Profile_thumb-image__vz1Iq" alt="Xây Dựng Website với ReactJS"></a>
-                      <div class="info">
-                        <h3 class="Profile_info-title__nwecV"><a href="/courses/reactjs">Xây
-                            Dựng Website với ReactJS</a></h3>
-                        <p class="Profile_info-desc__JTJYr">Khóa học ReactJS từ cơ bản tới nâng
-                          cao, kết quả của khóa học này là bạn có thể làm hầu hết các dự án
-                          thường gặp với ReactJS. Cuối khóa học này bạn sẽ sở hữu một dự án
-                          giống Tiktok.com, bạn có thể tự tin đi xin việc khi nắm chắc các
-                          kiến thức được chia sẻ trong khóa học này.</p>
-                      </div>
-                    </div>
-                    <div class="Profile_inner__EK7zA"><a class="Profile_thumb__dY3wD"
-                        href="/courses/javascript-co-ban"><img
-                          src="https://files.fullstack.edu.vn/f8-prod/courses/1.png" class="Profile_thumb-image__vz1Iq"
-                          alt="Lập Trình JavaScript Cơ Bản"></a>
-                      <div class="info">
-                        <h3 class="Profile_info-title__nwecV"><a href="/courses/javascript-co-ban">Lập Trình JavaScript
-                            Cơ
-                            Bản</a></h3>
-                        <p class="Profile_info-desc__JTJYr">Học Javascript cơ bản phù hợp cho
-                          người chưa từng học lập trình. Với hơn 100 bài học và có bài tập
-                          thực hành sau mỗi bài học.</p>
-                      </div>
-                    </div>
-                    <div class="Profile_inner__EK7zA"><a class="Profile_thumb__dY3wD"
-                        href="/courses/responsive-web-design"><img
-                          src="https://files.fullstack.edu.vn/f8-prod/courses/3.png" class="Profile_thumb-image__vz1Iq"
-                          alt="Responsive Với Grid System"></a>
-                      <div class="info">
-                        <h3 class="Profile_info-title__nwecV"><a href="/courses/responsive-web-design">Responsive Với
-                            Grid
-                            System</a></h3>
-                        <p class="Profile_info-desc__JTJYr">Trong khóa này chúng ta sẽ học về
-                          cách xây dựng giao diện web responsive với Grid System, tương tự
-                          Bootstrap 4.</p>
-                      </div>
-                    </div>
-                    <div class="Profile_inner__EK7zA"><a class="Profile_thumb__dY3wD" href="/courses/html-css"><img
-                          src="https://files.fullstack.edu.vn/f8-prod/courses/2.png" class="Profile_thumb-image__vz1Iq"
-                          alt="HTML CSS từ Zero đến Hero"></a>
-                      <div class="info">
-                        <h3 class="Profile_info-title__nwecV"><a href="/courses/html-css">HTML
-                            CSS từ Zero đến Hero</a></h3>
-                        <p class="Profile_info-desc__JTJYr">Trong khóa này chúng ta sẽ cùng nhau
-                          xây dựng giao diện 2 trang web là The Band &amp; Shopee.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+               
               </section>
             </section>
           </div>

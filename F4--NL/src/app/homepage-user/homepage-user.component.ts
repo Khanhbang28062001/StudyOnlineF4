@@ -46,7 +46,7 @@ export class HomepageUserComponent {
   ) { }
 
   userId: Number = 0;
-  User: UserModule = new UserModule(0, "", "", "", 0);
+  User: UserModule = new UserModule(0, "", "", "", 0,"");
   ngOnInit(): void {
     // this.userId =this.userIdService.getCurrentUserId();
     this.userIdService.currentUserId.subscribe(userId => this.userId = userId);

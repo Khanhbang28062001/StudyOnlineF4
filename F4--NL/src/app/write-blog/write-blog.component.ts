@@ -33,7 +33,7 @@ export class WriteBlogComponent implements OnInit {
     // (so truong du lieu trong ban)
   });
   userId: Number = 0;
-  User: UserModule = new UserModule(0, "", "", "", 0);
+  User: UserModule = new UserModule(0, "", "", "", 0,"");
 
   constructor(
     private common: CommonService,
