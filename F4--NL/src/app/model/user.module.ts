@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class UserModule {
 
   constructor(
-    public id: Number,
+    public userid: Number,
     public username: String,
     public password: String,
     public email: String,

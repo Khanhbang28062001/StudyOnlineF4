@@ -9,9 +9,6 @@ import { UserModule } from '../model/user.module';
 export class UserService {
   constructor(private httpClient: HttpClient,) { }
 
-  getUserById(Id: number) {
-    throw new Error('Method not implemented.');
-  }
   private REST_API_SERVER = 'http://127.0.0.1:8080/api/user/';
   private httpOptions = {
     headers : new HttpHeaders({
@@ -19,11 +16,6 @@ export class UserService {
     }),
   };
 
-  public addUser( id:number ): Observable< UserModule > {
-    const url = `${this.REST_API_SERVER}${id}`;
-    return this.httpClient.get<UserModule> (url,this.httpOptions);
-  }
-  
   public AddUser(payload: any): Observable< any > {
     const url = `${this.REST_API_SERVER}`;
     return this.httpClient.post<any> (url,  payload ,this.httpOptions);
@@ -31,6 +23,10 @@ export class UserService {
   public CheckLogin (payload: any ): Observable< UserModule  > {
     const url = `${this.REST_API_SERVER}login`;
     return this.httpClient.post<UserModule> (url,payload,this.httpOptions);
+  }
+  public getUserById(idUser:Number ): Observable< UserModule  > {
+    const url = `${this.REST_API_SERVER}${idUser}`;
+    return this.httpClient.get<UserModule> (url,this.httpOptions);
   }
 
 }

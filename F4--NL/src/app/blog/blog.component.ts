@@ -48,7 +48,7 @@ export class BlogComponent {
   public ngOnInit(): void {
     this.getBlogService.getAllSubmitBlog().subscribe((data) => {
       this.blogs = data;
-      // console.log(this.blogs)
+      console.log("blog ne",this.blogs)
     })
   }
 

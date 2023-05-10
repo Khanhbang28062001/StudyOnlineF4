@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { GetBlogService } from '../Service/get-blog.service';
 import { UserIDService } from '../Service/user-id.service';
 import { UserService } from '../Service/user.service';
 import { UserModule } from '../model/user.module';
 
 @Component({
-  selector: 'app-posts-drafts',
-  templateUrl: './posts-drafts.component.html',
-  styleUrls: ['./posts-drafts.component.css']
+  selector: 'app-study',
+  templateUrl: './study.component.html',
+  styleUrls: ['./study.component.css']
 })
-export class PostsDraftsComponent {
+export class StudyComponent {
   isDropDownOpen: boolean = false;
   isDropDownOpenNotification: boolean = false;
   isDropDownOpenBlog: boolean = false;
   public TenEmail = "bang";
   public Email = "bang-Email";
+  router: any;
+  UserIDService: any;
+
+
 
   openNavProfile(): void {
     this.isDropDownOpen = !this.isDropDownOpen;
@@ -32,23 +34,22 @@ export class PostsDraftsComponent {
     this.isDropDownOpen = false;
     this.isDropDownOpenNotification = false;
   }
-  constructor(
-    private getBlogService: GetBlogService,
-    private route: ActivatedRoute,
-    private router: Router,
-    private userIdService: UserIDService,
+  constructor(private userIdService: UserIDService,
     private userService: UserService
-  ) {
-  }
+  ) { }
+
   userId: Number = 0;
   User: UserModule = new UserModule(0, "", "", "", 0);
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
+    // this.userId =this.userIdService.getCurrentUserId();
     this.userIdService.currentUserId.subscribe(userId => this.userId = userId);
+    console.log(this.userId);
     this.userService.getUserById(this.userId).subscribe((data) => {
       this.User = data;
-      console.log("Lay du lieu role id route roi ne!!!!!! " + this.User.idrole);
+      console.log("user data:" + data.username);
     })
+    console.log("Lay du lieu user roi ne!!!!!!" + this.User.idrole);
 
   }
 }

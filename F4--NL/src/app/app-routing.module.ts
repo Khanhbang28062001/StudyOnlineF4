@@ -22,31 +22,36 @@ import { AdminComponent } from './admin/admin.component';
 import { HomepageGvComponent } from './homepage-gv/homepage-gv.component';
 import { HomepageUserComponent } from './homepage-user/homepage-user.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { StudyComponent } from './study/study.component';
 
 
 const routes: Routes = [
-  { path: 'add-course', component: AddCourseComponent},
-  { path: 'bookmark', component: BookmarkComponent},
-  { path: 'blog', component: BlogComponent},
-  { path: 'course', component: CourseComponent},
-  { path: 'keep-study', component: KeepStudyComponent},
-  { path: 'login-form', component: LoginFormComponent},
-  { path: 'posts-drafts', component: PostsDraftsComponent},
-  { path: 'posts-public', component: PostsPublicComponent},
-  { path: 'profile', component: ProfileComponent},
-  { path: 'security', component: SecurityComponent},
-  { path: 'setting-account', component: SettingAccountComponent},
-  { path: 'signup-form', component: SignupFormComponent},
-  { path: 'study-route', component: StudyRouteComponent},
-  { path: 'study-route-be', component: StudyRouteBeComponent},
-  { path: 'study-route-fe', component: StudyRouteFeComponent},
-  { path: 'write-blog', component: WriteBlogComponent},
-  { path: 'home-page-st', component:HomePageStComponent },
-  { path: 'homepage-gv', component:HomepageGvComponent },
-  { path: 'homepage-user', component:HomepageUserComponent},
-  { path: 'admin', component:AdminComponent},
-  { path: 'blog/:id', component:BlogDetailComponent},
-  { path: '**', component: AppComponent},
+  { path: 'add-course', component: AddCourseComponent },
+  { path: 'bookmark', component: BookmarkComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blogDetail', component: BlogDetailComponent },
+  { path: 'course', component: CourseComponent },
+  { path: 'keep-study', component: KeepStudyComponent },
+  { path: 'login-form', component: LoginFormComponent },
+  { path: 'posts-drafts', component: PostsDraftsComponent },
+  { path: 'posts-public', component: PostsPublicComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'security', component: SecurityComponent },
+  { path: 'setting-account', component: SettingAccountComponent },
+  { path: 'signup-form', component: SignupFormComponent },
+  { path: 'study-route', component: StudyRouteComponent },
+  { path: 'study-route-be', component: StudyRouteBeComponent },
+  { path: 'study-route-fe', component: StudyRouteFeComponent },
+  { path: 'write-blog', component: WriteBlogComponent },
+  { path: 'home-page-st', component: HomePageStComponent },
+  { path: 'homepage-gv', component: HomepageGvComponent },
+  { path: 'homepage-user', component: HomepageUserComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'study', component: StudyComponent },
+  { path: '**', component: AppComponent },
+  { path: 'blog/:id', component: BlogDetailComponent }
+
+
 
 ];
 
