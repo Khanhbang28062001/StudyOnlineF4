@@ -7,3 +7,8 @@
 .carousel-item{
     transition: transform .9s ease-in-out,-webkit-transform .9s ease-in-out;
 }
+.carousel-item {
+    position: relative;
+    left: 45%;
+    width: 100%;
+}

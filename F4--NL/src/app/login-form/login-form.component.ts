@@ -1,3 +1,4 @@
+import { UserIDService } from './../Service/user-id.service';
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -24,7 +25,8 @@ export class LoginFormComponent {
   constructor (private common: CommonService,
     private formBuilder: FormBuilder,
     private userService:UserService,
-    private router : Router
+    private router : Router,
+    private UserIDService:UserIDService
    ){
 
    }
@@ -40,13 +42,18 @@ export class LoginFormComponent {
         console.log('access successful', data)
         if (data.idrole == 1){
           this.router.navigate(['/home-page-st']);
+          this.UserIDService.changeUserId(data.userid);
+          console.log("id login here !!!!!!!"+data.userid);
         }
         if (data.idrole == 2){
           this.router.navigate(['/homepage-gv']);
+          this.UserIDService.changeUserId(data.userid);
         }
         if (data.idrole == 3){
-          this.routeroutlet = "";
+           this.router.navigate(['/admin']);
+          this.UserIDService.changeUserId(data.userid);
         }
+
       }
       );
     }

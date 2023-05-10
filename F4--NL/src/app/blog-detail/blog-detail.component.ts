@@ -1,5 +1,3 @@
-
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GetBlogService } from '../Service/get-blog.service';
@@ -19,8 +17,8 @@ export class BlogDetailComponent implements OnInit {
     // })
   }
   ngOnInit(): void {
-    this.blogId = this.route.snapshot.paramMap.get('id');
-    console.log(this.blogId);
+    this.blogId = this.route.snapshot.paramMap.get('1');
+    console.log("id blog ne",this.blog.id);
     this.getBlogService.getSubmitBlog(this.blogId).subscribe((data) => {
       this.blog = data;
     })

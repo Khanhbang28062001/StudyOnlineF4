@@ -58,10 +58,10 @@
               <div class="UserMenu_avatarWrapper__9ABYL">
                 <div class="FallbackAvatar_avatar__gmj3S" style="--font-size:5.6px;"><img
                     src="https://files.fullstack.edu.vn/f8-prod/user_photos/289130/63da5c8beb71a.jpg"
-                    alt="{{TenEmail}}"></div>
+                    alt="{{User.email}}"></div>
               </div>
-              <div class="UserMenu_info__UqeZT"><span class="UserMenu_name__L18s-">{{ TenEmail }}</span>
-                <div class="UserMenu_username__7qkRU">{{ Email }}</div>
+              <div class="UserMenu_info__UqeZT"><span class="UserMenu_name__L18s-">{{ User.username}}</span>
+                <div class="UserMenu_username__7qkRU">{{ User.email }}</div>
               </div>
             </div>
             <hr>
@@ -130,7 +130,7 @@
                   class="fa-solid fa-road"></i><span>Lộ trình</span></a>
             </li>
 
-            <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/home-page-st" routerLinkActive="active"><i
+            <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/study" routerLinkActive="active"><i
                   class="fa-solid fa-lightbulb"></i><span>Học</span></a>
             </li>
             <li><a class="Sidebar_itemBtn__Q78b7" routerLink="/blog" routerLinkActive="active"><i

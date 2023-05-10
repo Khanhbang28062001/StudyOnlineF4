@@ -30,6 +30,7 @@ import { HomepageUserComponent } from './homepage-user/homepage-user.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { GetBlogService } from './Service/get-blog.service';
 import { UserModule } from './model/user.module';
+import { StudyComponent } from './study/study.component';
 
 
 
@@ -57,6 +58,7 @@ import { UserModule } from './model/user.module';
     HomepageGvComponent,
     HomepageUserComponent,
     BlogDetailComponent,
+    StudyComponent,
 
     
   

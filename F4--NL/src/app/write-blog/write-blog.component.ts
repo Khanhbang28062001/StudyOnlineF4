@@ -2,6 +2,11 @@ import { HttpServerService } from './../Service/http-server.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CommonService } from './../Service/common.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { GetBlogService } from '../Service/get-blog.service';
+import { UserIDService } from '../Service/user-id.service';
+import { UserService } from '../Service/user.service';
+import { UserModule } from '../model/user.module';
 
 
 @Component({
@@ -27,11 +32,18 @@ export class WriteBlogComponent implements OnInit {
     content: ['', Validators.required],
     // (so truong du lieu trong ban)
   });
+  userId: Number = 0;
+  User: UserModule = new UserModule(0, "", "", "", 0);
 
   constructor(
     private common: CommonService,
     private formBuilder: FormBuilder,
-    private httpServerService: HttpServerService
+    private httpServerService: HttpServerService,
+    private getBlogService: GetBlogService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private userIdService: UserIDService,
+    private userService: UserService
   ) { }
   public submitBlog(): void {
 
@@ -49,10 +61,17 @@ export class WriteBlogComponent implements OnInit {
     const payload = this.formData.value;
 
     this.httpServerService.getSubmitBlog().subscribe((data) => {
-      console.log('getSubmitBlog', data)
+      // console.log('getSubmitBlog', data)
+      console.log("Lay du lieu user blog roi ne!!!!!! " + this.User.idrole);
+    })
+    this.userIdService.currentUserId.subscribe(userId => this.userId = userId);
+    this.userService.getUserById(this.userId).subscribe((data) => {
+      this.User = data;
+      console.log("Lay du lieu user blog roi ne!!!!!! " + this.User.idrole);
     })
   }
 
+ 
 
   openNavProfile(): void {
     this.isDropDownOpen = !this.isDropDownOpen;
