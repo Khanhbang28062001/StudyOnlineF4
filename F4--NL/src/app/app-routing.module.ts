@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'add-course', component: AddCourseComponent },
   { path: 'bookmark', component: BookmarkComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'blogDetail', component: BlogDetailComponent },
+  { path: 'blogDetail/:id', component: BlogDetailComponent },
   { path: 'course', component: CourseComponent },
   { path: 'keep-study', component: KeepStudyComponent },
   { path: 'login-form', component: LoginFormComponent },
@@ -49,7 +49,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'study', component: StudyComponent },
   { path: '**', component: AppComponent },
-  { path: 'blog/:id', component: BlogDetailComponent }
+
 
 
 

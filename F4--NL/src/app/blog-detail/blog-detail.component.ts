@@ -12,12 +12,14 @@ export class BlogDetailComponent implements OnInit {
   public description = this.blog.descriptionBlog;
   blogId?: any;
   constructor(private getBlogService: GetBlogService, private route: ActivatedRoute) {
-    // console.log(this.blog);
-    
-    // })
+    this.blogId = this.route.snapshot.paramMap.get('id');
+    console.log("id blog ne",this.blog.id);
+    this.getBlogService.getSubmitBlog(this.blogId).subscribe((data) => {
+      this.blog = data;
+    })
   }
   ngOnInit(): void {
-    this.blogId = this.route.snapshot.paramMap.get('1');
+    this.blogId = this.route.snapshot.paramMap.get('id');
     console.log("id blog ne",this.blog.id);
     this.getBlogService.getSubmitBlog(this.blogId).subscribe((data) => {
       this.blog = data;
