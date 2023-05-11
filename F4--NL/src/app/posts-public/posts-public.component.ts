@@ -42,7 +42,6 @@ export class PostsPublicComponent {
     private userService: UserService
   ) {
   }
-  
   userId: Number = 0;
   User: UserModule = new UserModule(0, "", "", "", 0,"");
   
