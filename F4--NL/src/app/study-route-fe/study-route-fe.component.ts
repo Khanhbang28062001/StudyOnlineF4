@@ -34,6 +34,12 @@ export class StudyRouteFeComponent {
     this.isDropDownOpen = false;
     this.isDropDownOpenNotification= false;
   }
+  public Login() {
+    this.router.navigate(['/login-form']);
+  }
+  public signup() {
+    this.router.navigate(['/signup-form']);
+  }
   constructor(
     private getBlogService: GetBlogService,
     private route: ActivatedRoute,

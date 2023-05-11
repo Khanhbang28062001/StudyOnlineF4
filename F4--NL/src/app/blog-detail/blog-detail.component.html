@@ -129,7 +129,7 @@
                             </ul>
                             <hr>
                             <ul class="UserMenu_list__FI9-C">
-                              <li><a class="UserMenu_item__NXwf1" href="/setting-account">Cài đặt</a></li>
+                              <li><a class="UserMenu_item__NXwf1" routerLink="/setting-account" routerLinkActive="active">Cài đặt</a></li>
                               <li><a class="UserMenu_item__NXwf1" routerLink="/login-form" routerLinkActive="active">Đăng xuất</a>
                               </li>
                             </ul>
@@ -194,8 +194,8 @@
                             <section class="index-module_row__-AHgh">
                                 <section
                                     class="index-module_col__2EQm9 index-module_c-0__10PYb index-module_m-0__18VBx index-module_l-2__2TSUm index-module_l-o-1__3wI_9">
-                                    <div class="BlogDetail_aside__5IVfa"><a href="/@hieucaok">
-                                            <h4 class="BlogDetail_userName__XjPY6">Hieu Cao K.</h4>
+                                    <div class="BlogDetail_aside__5IVfa"><a routerLink="/profile" roueterLinkActive="active">
+                                            <h4 class="BlogDetail_userName__XjPY6">{{User.username}}</h4>
                                         </a>
                                         <p class="BlogDetail_userTitle__Ylia7"></p>
                                         <hr>
@@ -228,13 +228,13 @@
                                         </ng-container>
                                         <!-- Thông tin user của blog  -->
                                         <div class="BlogDetail_header__w09Xd">
-                                            <div class="BlogDetail_user__Q6EHE"><a href="/@hieucaok">
+                                            <div class="BlogDetail_user__Q6EHE"><a routerLink="/profile" roueterLinkActive="active">
                                                     <div class="FallbackAvatar_avatar__gmj3S"
                                                         style="--font-size:5.6px;">
                                                         <img src="{{blog.imageurlBlog}}" alt="Hieu Cao K.">
                                                     </div>
                                                 </a>
-                                                <div class="BlogDetail_info__3xVU9"><a href="/@hieucaok"><span
+                                                <div class="BlogDetail_info__3xVU9"><a routerLink="/profile" roueterLinkActive="active"><span
                                                             class="BlogDetail_name__FKdW-">Hieu Cao K.</span></a>
                                                     <p class="BlogDetail_time__J0n0e">10 giờ trước <span
                                                             class="BlogDetail_dot__HCutF">·</span> 1 phút đọc</p>
@@ -306,17 +306,16 @@
                                             <h3>Các chủ đề được đề xuất</h3>
                                             <ul class="TopicsList_topics__EU6iM">
                                                 <li>
-                                                    <a href="/blog/topic/front-end-mobile-apps">Front-end / Mobile
-                                                        apps</a>
+                                                   Front-end / Mobile apps
                                                 </li>
                                                 <li>
-                                                    <a href="/blog/topic/back-end-devops">Back-end / Devops</a>
+                                                  Back-end / Devops
                                                 </li>
                                                 <li>
-                                                    <a href="/blog/topic/ui-ux-design">UI / UX / Design</a>
+                                                    UI / UX / Design
                                                 </li>
                                                 <li>
-                                                    <a href="/blog/topic/others">Others</a>
+                                                    Others
                                                 </li>
                                             </ul>
                                         </div>
