@@ -1,6 +1,7 @@
 package ctu.vn.backend.entity;
 
-import java.sql.Time;
+// import java.sql.Time;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -21,22 +22,23 @@ public class Blog {
     private int user_id;
 
     @Column(nullable = false, name = "description")
-    private String descriptionBlog;
+    private String description;
 
     @Column(nullable = true, name = "image_url")
-    private String imageurlBlog;
+    private String image_url;
 
     @Column(nullable = false, name = "content")
-    private String contentBlog;
+    private String content;
 
     @Column(nullable = true, name = "total_favorite")
-    private int favoriteBlog;
+    private int total_favorite;
 
     @Column(nullable = true, name = "total_comment")
-    private int commentBlog;
+    private int total_comment;
 
+    @Temporal(TemporalType.DATE)
     @Column(nullable = true, name = "date_created")
-    private Time timeCreateBlog;
+    private Date date_created;
 
     public Blog() {
 

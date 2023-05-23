@@ -49,7 +49,7 @@ public class BlogController {
         Optional<Blog> blog = blogService.findById(blogId);
         return ResponseEntity.ok().body(blog);
     }
-    
+
     @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{id}")
     public ResponseEntity<Message> deleteBlog(@PathVariable(value = "id") Integer blogId) {

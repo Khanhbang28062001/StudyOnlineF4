@@ -1,12 +1,14 @@
 package ctu.vn.backend.Service;
 
-import ctu.vn.backend.DAO.CourseRepository;
-import ctu.vn.backend.entity.Course;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import ctu.vn.backend.DAO.CourseRepository;
+import ctu.vn.backend.DAO.UserRepository;
+import ctu.vn.backend.entity.Course;
 
 @Service
 public class CourseService {
@@ -25,6 +27,9 @@ public class CourseService {
             throw new CourseNotFoundException("Course not found with id " + id);
         }
     }
+
+    @Autowired
+    private UserRepository userRepository;
 
     public Course createCourse(Course course) {
         return courseRepository.save(course);

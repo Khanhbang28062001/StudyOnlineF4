@@ -24,4 +24,3 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
     }
 
 }
-
